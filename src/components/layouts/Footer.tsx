@@ -6,22 +6,22 @@ export const Footer = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-wrap justify-end space-x-4 text-sm">
                     <Link href="/legal" className="hover:underline">
-                        Mentions légales
+                        Legal notices
                     </Link>
                     <Link href="/cgv" className="hover:underline">
-                        CGV
+                        GTC
                     </Link>
                     <Link href="/cgu" className="hover:underline">
-                        CGU
+                        T&C
                     </Link>
                     <Link href="/plan" className="hover:underline">
-                        Plan du site
+                        Site Map
                     </Link>
                     <Link href="/privacy" className="hover:underline">
-                        Politique de confidentialité
+                        Privacy Policy
                     </Link>
                     <Link href="/cookies" className="hover:underline">
-                        Paramétrer les cookies
+                        Configure cookies
                     </Link>
                 </div>
             </div>

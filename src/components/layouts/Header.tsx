@@ -10,16 +10,16 @@ export const Header = () => {
                     <Image src={"/logo.png"} alt="logo" width={75} height={25} />
                 </Link>
                 <div className="hidden md:flex gap-8">
-                    <Link href="/clubs" className="text-white hover:text-[#ffd600]">
+                    <Link href="/clubs" className="text-white hover:text-[#ffd600] font-bold italic">
                         CLUBS
                     </Link>
-                    <Link href="/blog" className="text-white hover:text-[#ffd600]">
+                    <Link href="/blog" className="text-white hover:text-[#ffd600] font-bold italic">
                         BLOG
                     </Link>
-                    <Link href="/about-us" className="text-white hover:text-[#ffd600]">
+                    <Link href="/about-us" className="text-white hover:text-[#ffd600] font-bold italic">
                         ABOUT US
                     </Link>
-                    <Link href="/contact" className="text-white hover:text-[#ffd600]">
+                    <Link href="/contact" className="text-white hover:text-[#ffd600] font-bold italic">
                         CONTACT
                     </Link>
                 </div>
