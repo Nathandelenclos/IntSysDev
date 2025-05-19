@@ -4,10 +4,10 @@ import {Connect} from "@/components/icons/Connect";
 
 export const Header = () => {
     return (
-        <nav className="bg-[#3b444b] px-6 py-4 flex items-center justify-between">
+        <nav className="bg-[#3b444b] px-8 py-4 flex items-center justify-between">
             <div className="flex items-center gap-[100px]">
                 <Link href="/">
-                    <Image src={"/logo.png"} alt="logo" width={100} height={50} />
+                    <Image src={"/logo.png"} alt="logo" width={75} height={25} />
                 </Link>
                 <div className="hidden md:flex gap-8">
                     <Link href="/clubs" className="text-white hover:text-[#ffd600]">

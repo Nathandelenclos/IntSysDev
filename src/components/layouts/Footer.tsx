@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer className="bg-[#3b444b] text-white py-4">
             <div className="container mx-auto px-6">
-                <div className="flex flex-wrap justify-center space-x-4 text-sm">
+                <div className="flex flex-wrap justify-end space-x-4 text-sm">
                     <Link href="/legal" className="hover:underline">
                         Mentions légales
                     </Link>
