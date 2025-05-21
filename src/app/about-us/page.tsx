@@ -7,8 +7,8 @@ export default function AboutUs() {
         <main className="min-h-screen">
             <Header />
 
-            <section className="h-[800px] bg-[url(/backgrounds/about-us.png)] bg-cover overflow-hidden">
-                <div className="inline-flex flex-col flex-start gap-8 mt-12 ml-12 w-[800px]">
+            <section className="min-h-[800px] bg-[url(/backgrounds/about-us.png)] bg-cover overflow-hidden">
+                <div className="inline-flex flex-col flex-start gap-8 m-12 max-w-[800px]">
                     <H2>About us</H2>
                     <div className="flex flex-col gap-4">
                         <div className="flex flex-col gap-2">

@@ -9,7 +9,7 @@ export default function Register() {
             <Header />
 
             <section className="h-[800px] bg-[url(/backgrounds/register.png)] bg-cover overflow-hidden">
-                <div className="inline-flex flex-col flex-start gap-8 h-full justify-center ml-12 w-[450px]">
+                <div className="flex flex-col flex-start gap-8 h-full justify-center m-12 max-w-[450px]">
                     <H2>Register</H2>
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-4">

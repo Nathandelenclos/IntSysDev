@@ -16,7 +16,6 @@ export default function Home() {
         {/* Members Section */}
         <MembersSection />
 
-
         {/* Newsletter Section */}
         <NewsletterSection />
 

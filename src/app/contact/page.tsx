@@ -10,10 +10,10 @@ export default function Contact() {
             <Header />
 
             <section className="h-[800px] bg-[url(/backgrounds/contact.png)] bg-cover overflow-hidden">
-                <div className="inline-flex flex-col flex-start gap-8 mt-12 ml-12 w-[450px]">
+                <div className="flex flex-col flex-start gap-8 m-12 max-w-[450px]">
                     <H2>Contact</H2>
                     <div className="flex flex-col gap-8">
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-row gap-4 max-sm:flex-col max-sm:gap-0">
                             <Link href="tel:+33 3 27 96 47 38" className="flex gap-2 font-bold">
                                 <Image src="/icons/phone.svg" alt="phone" height="18" width="18" />
                                 <p>+33 3 27 96 47 38</p>
