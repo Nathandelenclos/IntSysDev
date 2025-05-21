@@ -89,7 +89,7 @@ export default function Blog() {
             <section className="flex flex-col h-full bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)] bg-cover overflow-hidden p-16 gap-8 justify-center">
                 <div className="flex justify-between w-full px-8">
                     <h2 className="text-4xl font-bold uppercase text-white">BLOG</h2>
-                    <Link href="#" className="bg-[#FFD600] px-4 py-2 font-bold rounded-md">Create a Post</Link>
+                    <Link href="/blog/create" className="bg-[#FFD600] px-4 py-2 font-bold rounded-md">Create a Post</Link>
                 </div>
                 <div className="grid h-[731px] gap-8 self-stretch grid-rows-3 grid-cols-3 ">
                     {posts.map((post, index) => (<Card post={post} key={index} />))}
