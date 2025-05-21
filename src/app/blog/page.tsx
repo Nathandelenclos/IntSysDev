@@ -35,28 +35,22 @@ export default function Blog() {
     });
 
     return (
-        <main className="min-h-screen">
-            <Header />
+        <>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">BLOG</h2>
+                <Link
+                    href="/blog/create"
+                    className="bg-[#FFD600] px-4 py-2 font-bold rounded-md text-sm sm:text-base"
+                >
+                    Create a Post
+                </Link>
+            </div>
 
-            <section className="flex flex-col bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)] bg-cover overflow-hidden px-4 sm:px-8 md:px-16 py-8 gap-8">
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">BLOG</h2>
-                    <Link
-                        href="/blog/create"
-                        className="bg-[#FFD600] px-4 py-2 font-bold rounded-md text-sm sm:text-base"
-                    >
-                        Create a Post
-                    </Link>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {posts.map((post, index) => (
-                        <Card post={post} key={index} />
-                    ))}
-                </div>
-            </section>
-
-            <Footer />
-        </main>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {posts.map((post, index) => (
+                    <Card post={post} key={index} />
+                ))}
+            </div>
+        </>
     );
 }
