@@ -1,10 +1,11 @@
+import {ReactNode} from "react";
 import {Header} from "@/components/layouts/Header";
 import {Footer} from "@/components/layouts/Footer";
 
 export default function BlogLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: ReactNode;
 }>) {
     return (
         <main className="min-h-screen">

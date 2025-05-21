@@ -1,9 +1,7 @@
 "use client";
 
-import { Header } from "@/components/layouts/Header";
 import Link from "next/link";
-import { Footer } from "@/components/layouts/Footer";
-import { useParams } from "next/navigation";
+import {useParams} from "next/navigation";
 import Image from "next/image";
 
 export default function Post() {

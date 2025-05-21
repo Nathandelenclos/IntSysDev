@@ -1,10 +1,9 @@
 "use client";
 
-import { Header } from "@/components/layouts/Header";
 import Link from "next/link";
-import { Footer } from "@/components/layouts/Footer";
-import { useRef } from "react";
-import { Editor } from "@tinymce/tinymce-react";
+import {useRef} from "react";
+import {Editor} from "@tinymce/tinymce-react";
+
 
 export default function CreatePost() {
     const editorRef = useRef(null);
