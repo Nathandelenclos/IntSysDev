@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import {useParams} from "next/navigation";
 import Image from "next/image";
 
 export default function Post() {
-    const { id } = useParams<{ id: string }>();
 
     return (
         <>
