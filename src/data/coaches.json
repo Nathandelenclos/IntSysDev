@@ -1,0 +1,198 @@
+{
+    "crossfit": [
+        {
+            "id": "1",
+            "name": "Julie Martin",
+            "role": "CrossFit Coach",
+            "imageUrl": "/coaches/julie.jpg",
+            "bio": "With over 5 years of experience in group and personal training, Julie brings energy and expertise to every CrossFit session. Her focus on proper form and technique ensures safe and effective workouts for all levels.",
+            "specialties": ["CrossFit", "Functional Strength Training", "Group Training"],
+            "certifications": [
+                "CrossFit Level 2 Trainer",
+                "Functional Strength Training Certification",
+                "Group Fitness Instructor"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Thomas Durand",
+            "role": "CrossFit & Strength Coach",
+            "imageUrl": "/coaches/thomas.jpg",
+            "bio": "A former athlete with 8 years of professional coaching experience, Thomas specializes in strength and endurance training. His background in competitive sports helps him push athletes to achieve their full potential.",
+            "specialties": ["CrossFit", "Strength Training", "Endurance Training"],
+            "certifications": [
+                "CrossFit Level 2 Trainer",
+                "Strength and Conditioning Specialist",
+                "Sports Performance Coach"
+            ]
+        }
+    ],
+    "pilates": [
+        {
+            "id": "3",
+            "name": "Emma Laurent",
+            "role": "Pilates Instructor",
+            "imageUrl": "/coaches/emma.jpg",
+            "bio": "Certified Pilates instructor with a passion for helping clients achieve better posture, core strength, and overall body awareness. Emma's gentle yet effective teaching style makes Pilates accessible to everyone.",
+            "specialties": ["Mat Pilates", "Reformer Pilates", "Posture Correction"],
+            "certifications": [
+                "Comprehensive Pilates Certification",
+                "Posture Analysis Specialist",
+                "Pre/Post Natal Pilates"
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Lucas Moreau",
+            "role": "Pilates & Movement Specialist",
+            "imageUrl": "/coaches/lucas.jpg",
+            "bio": "With a background in dance and physical therapy, Lucas brings a unique perspective to Pilates instruction. He specializes in injury prevention and rehabilitation through mindful movement.",
+            "specialties": ["Movement Therapy", "Injury Prevention", "Dance Conditioning"],
+            "certifications": [
+                "Advanced Pilates Certification",
+                "Physical Therapy Assistant",
+                "Dance Medicine Specialist"
+            ]
+        }
+    ],
+    "zumba": [
+        {
+            "id": "5",
+            "name": "Maria Rodriguez",
+            "role": "Zumba Instructor",
+            "imageUrl": "/coaches/maria.jpg",
+            "bio": "Born and raised in Colombia, Maria brings authentic Latin dance energy to every class. Her infectious enthusiasm and professional dance background make her classes both fun and effective.",
+            "specialties": ["Latin Dance", "Cardio Fitness", "Group Exercise"],
+            "certifications": [
+                "Zumba Basic 1 & 2",
+                "Zumba Toning",
+                "Professional Dance Instructor"
+            ]
+        },
+        {
+            "id": "6",
+            "name": "Carlos Mendez",
+            "role": "Zumba & Fitness Coach",
+            "imageUrl": "/coaches/carlos.jpg",
+            "bio": "A former professional dancer turned fitness instructor, Carlos combines his passion for dance with fitness expertise. His high-energy classes are known for their perfect blend of fun and workout intensity.",
+            "specialties": ["Dance Fitness", "Cardio Training", "Group Motivation"],
+            "certifications": [
+                "Zumba Instructor",
+                "Group Fitness Certification",
+                "Dance Performance Arts"
+            ]
+        }
+    ],
+    "mom-sessions": [
+        {
+            "id": "7",
+            "name": "Sarah Dubois",
+            "role": "Postnatal Fitness Specialist",
+            "imageUrl": "/coaches/sarah.jpg",
+            "bio": "Specialized in postnatal fitness and recovery, Sarah helps new mothers regain strength and confidence through safe and effective exercise programs. Her approach combines fitness expertise with maternal support.",
+            "specialties": ["Postnatal Recovery", "Core Rehabilitation", "Maternal Fitness"],
+            "certifications": [
+                "Pre/Post Natal Fitness Specialist",
+                "Pelvic Floor Rehabilitation",
+                "Maternal Wellness Coach"
+            ]
+        },
+        {
+            "id": "8",
+            "name": "Marie Laurent",
+            "role": "Maternal Health Coach",
+            "imageUrl": "/coaches/marie.jpg",
+            "bio": "With a background in physiotherapy and maternal health, Marie specializes in creating safe and effective fitness programs for mothers at all stages of their journey.",
+            "specialties": ["Maternal Health", "Gentle Exercise", "Wellness Coaching"],
+            "certifications": [
+                "Maternal Health Specialist",
+                "Physiotherapy Degree",
+                "Wellness Coach Certification"
+            ]
+        }
+    ],
+    "sauna": [
+        {
+            "id": "9",
+            "name": "Sophie Martin",
+            "role": "Wellness Specialist",
+            "imageUrl": "/coaches/sophie.jpg",
+            "bio": "Dedicated to promoting holistic wellness through traditional sauna practices. Sophie combines modern wellness techniques with time-honored sauna traditions for optimal health benefits.",
+            "specialties": ["Sauna Therapy", "Wellness Coaching", "Stress Management"],
+            "certifications": [
+                "Wellness Therapy Certification",
+                "Sauna Therapy Specialist",
+                "Holistic Health Coach"
+            ]
+        },
+        {
+            "id": "10",
+            "name": "Lucas Dubois",
+            "role": "Thermal Therapy Expert",
+            "imageUrl": "/coaches/lucas-d.jpg",
+            "bio": "Expert in thermal therapy and wellness practices, Lucas helps clients maximize the benefits of sauna sessions through proper techniques and complementary wellness practices.",
+            "specialties": ["Thermal Therapy", "Wellness Practices", "Health Optimization"],
+            "certifications": [
+                "Thermal Therapy Specialist",
+                "Wellness Practitioner",
+                "Health Coach Certification"
+            ]
+        }
+    ],
+    "massage": [
+        {
+            "id": "11",
+            "name": "Sophie Martin",
+            "role": "Massage Therapist",
+            "imageUrl": "/coaches/sophie-m.jpg",
+            "bio": "Experienced massage therapist specializing in various techniques to promote relaxation, reduce stress, and improve overall well-being. Sophie's therapeutic approach addresses both physical and mental wellness.",
+            "specialties": ["Deep Tissue", "Swedish Massage", "Stress Relief"],
+            "certifications": [
+                "Licensed Massage Therapist",
+                "Deep Tissue Specialist",
+                "Wellness Therapy Certification"
+            ]
+        },
+        {
+            "id": "12",
+            "name": "Lucas Dubois",
+            "role": "Therapeutic Massage Specialist",
+            "imageUrl": "/coaches/lucas-m.jpg",
+            "bio": "Specialized in therapeutic massage techniques, Lucas helps clients achieve optimal physical and mental wellness through personalized massage therapy sessions.",
+            "specialties": ["Therapeutic Massage", "Sports Massage", "Wellness Therapy"],
+            "certifications": [
+                "Therapeutic Massage Certification",
+                "Sports Massage Specialist",
+                "Wellness Practitioner"
+            ]
+        }
+    ],
+    "relaxation": [
+        {
+            "id": "13",
+            "name": "Emma Laurent",
+            "role": "Relaxation Specialist",
+            "imageUrl": "/coaches/emma-r.jpg",
+            "bio": "Dedicated to helping clients achieve deep relaxation and stress relief through guided sessions. Emma's calming presence and expertise create a perfect environment for relaxation and rejuvenation.",
+            "specialties": ["Guided Relaxation", "Stress Management", "Mindfulness"],
+            "certifications": [
+                "Relaxation Therapy Certification",
+                "Stress Management Specialist",
+                "Mindfulness Coach"
+            ]
+        },
+        {
+            "id": "14",
+            "name": "Thomas Moreau",
+            "role": "Wellness & Relaxation Coach",
+            "imageUrl": "/coaches/thomas-r.jpg",
+            "bio": "Expert in relaxation techniques and wellness practices, Thomas helps clients find balance and peace through personalized relaxation sessions and wellness guidance.",
+            "specialties": ["Relaxation Techniques", "Wellness Coaching", "Stress Relief"],
+            "certifications": [
+                "Wellness Coach Certification",
+                "Relaxation Therapy Specialist",
+                "Stress Management Coach"
+            ]
+        }
+    ]
+} 

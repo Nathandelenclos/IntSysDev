@@ -1,15 +1,16 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
+  --foreground: #000000;
   --background: #ffffff;
-  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -23,4 +24,40 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.article-content {
+  @apply max-w-none text-lg leading-relaxed;
+}
+
+.article-content h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.article-content h3 {
+  @apply text-xl font-semibold mt-6 mb-3;
+}
+
+.article-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+.article-content ul, .article-content ol {
+  @apply mb-4 ml-6;
+}
+
+.article-content li {
+  @apply mb-2;
+}
+
+.article-content a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.article-content strong {
+  @apply font-bold;
+}
+
+.article-content em {
+  @apply italic;
 }

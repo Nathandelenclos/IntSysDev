@@ -1,0 +1,188 @@
+{
+    "crossfit": {
+        "schedules": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    { "start": "07:00", "end": "08:00", "color": "#FFD600" },
+                    { "start": "18:00", "end": "19:00", "color": "#FFD600" }
+                ]
+            },
+            {
+                "day": "Wednesday",
+                "timeSlots": [
+                    { "start": "07:00", "end": "08:00", "color": "#FFD600" },
+                    { "start": "18:00", "end": "19:00", "color": "#FFD600" }
+                ]
+            },
+            {
+                "day": "Friday",
+                "timeSlots": [
+                    { "start": "07:00", "end": "08:00", "color": "#FFD600" },
+                    { "start": "18:00", "end": "19:00", "color": "#FFD600" }
+                ]
+            },
+            {
+                "day": "Saturday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#FFD600" }
+                ]
+            }
+        ]
+    },
+    "pilates": {
+        "schedules": [
+            {
+                "day": "Tuesday",
+                "timeSlots": [
+                    { "start": "08:30", "end": "09:30", "color": "#4CAF50" },
+                    { "start": "17:30", "end": "18:30", "color": "#4CAF50" }
+                ]
+            },
+            {
+                "day": "Thursday",
+                "timeSlots": [
+                    { "start": "08:30", "end": "09:30", "color": "#4CAF50" },
+                    { "start": "17:30", "end": "18:30", "color": "#4CAF50" }
+                ]
+            },
+            {
+                "day": "Sunday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#4CAF50" }
+                ]
+            }
+        ]
+    },
+    "zumba": {
+        "schedules": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    { "start": "18:30", "end": "19:30", "color": "#FF1493" }
+                ]
+            },
+            {
+                "day": "Wednesday",
+                "timeSlots": [
+                    { "start": "18:30", "end": "19:30", "color": "#FF1493" }
+                ]
+            },
+            {
+                "day": "Friday",
+                "timeSlots": [
+                    { "start": "18:30", "end": "19:30", "color": "#FF1493" }
+                ]
+            },
+            {
+                "day": "Saturday",
+                "timeSlots": [
+                    { "start": "11:00", "end": "12:00", "color": "#FF1493" }
+                ]
+            }
+        ]
+    },
+    "mom-sessions": {
+        "schedules": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#9C27B0" }
+                ]
+            },
+            {
+                "day": "Wednesday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#9C27B0" }
+                ]
+            },
+            {
+                "day": "Friday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#9C27B0" }
+                ]
+            }
+        ]
+    },
+    "sauna": {
+        "schedules": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#FF6B6B" },
+                    { "start": "14:00", "end": "15:00", "color": "#FF6B6B" },
+                    { "start": "16:00", "end": "17:00", "color": "#FF6B6B" }
+                ]
+            },
+            {
+                "day": "Wednesday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#FF6B6B" },
+                    { "start": "14:00", "end": "15:00", "color": "#FF6B6B" },
+                    { "start": "16:00", "end": "17:00", "color": "#FF6B6B" }
+                ]
+            },
+            {
+                "day": "Friday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#FF6B6B" },
+                    { "start": "14:00", "end": "15:00", "color": "#FF6B6B" },
+                    { "start": "16:00", "end": "17:00", "color": "#FF6B6B" }
+                ]
+            }
+        ]
+    },
+    "massage": {
+        "schedules": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#9B6B9E" },
+                    { "start": "14:00", "end": "15:00", "color": "#9B6B9E" },
+                    { "start": "16:00", "end": "17:00", "color": "#9B6B9E" }
+                ]
+            },
+            {
+                "day": "Wednesday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#9B6B9E" },
+                    { "start": "14:00", "end": "15:00", "color": "#9B6B9E" },
+                    { "start": "16:00", "end": "17:00", "color": "#9B6B9E" }
+                ]
+            },
+            {
+                "day": "Friday",
+                "timeSlots": [
+                    { "start": "10:00", "end": "11:00", "color": "#9B6B9E" },
+                    { "start": "14:00", "end": "15:00", "color": "#9B6B9E" },
+                    { "start": "16:00", "end": "17:00", "color": "#9B6B9E" }
+                ]
+            }
+        ]
+    },
+    "relaxation": {
+        "schedules": [
+            {
+                "day": "Monday",
+                "timeSlots": [
+                    { "start": "11:00", "end": "12:00", "color": "#7FB3D5" },
+                    { "start": "15:00", "end": "16:00", "color": "#7FB3D5" }
+                ]
+            },
+            {
+                "day": "Wednesday",
+                "timeSlots": [
+                    { "start": "11:00", "end": "12:00", "color": "#7FB3D5" },
+                    { "start": "15:00", "end": "16:00", "color": "#7FB3D5" }
+                ]
+            },
+            {
+                "day": "Friday",
+                "timeSlots": [
+                    { "start": "11:00", "end": "12:00", "color": "#7FB3D5" },
+                    { "start": "15:00", "end": "16:00", "color": "#7FB3D5" }
+                ]
+            }
+        ]
+    }
+} 

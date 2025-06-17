@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import {getAllArticles} from "@/utils/articles";
 
 interface IPost {
+    slug: string;
     title: string;
     description: string;
     link: string;
@@ -17,7 +21,7 @@ const Card = ({ post }: { post: IPost }) => {
                 <Link href="#" className="rounded-md px-4 py-2 bg-[#003A5E] text-white text-sm">
                     Share this post
                 </Link>
-                <Link href={post.link} className="rounded-md px-4 py-2 bg-[#FFD600] text-sm">
+                <Link href={`/blog/${post.slug}`} className="rounded-md px-4 py-2 bg-[#FFD600] text-sm">
                     Read Now
                 </Link>
             </div>
@@ -26,11 +30,13 @@ const Card = ({ post }: { post: IPost }) => {
 };
 
 export default function Blog() {
-    const posts: IPost[] = Array(11).fill({
-        description: "Train at home without anything! And it works!",
-        link: "/blog/test",
-        title: "How to train at home",
-    });
+    const articles = getAllArticles();
+    const posts: IPost[] = articles.map(article => ({
+        slug: article.slug,
+        title: article.title,
+        description: article.description,
+        link: `/blog/${article.slug}`
+    }));
 
     return (
         <>
@@ -45,8 +51,8 @@ export default function Blog() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {posts.map((post, index) => (
-                    <Card post={post} key={index} />
+                {posts.map((post) => (
+                    <Card post={post} key={post.slug} />
                 ))}
             </div>
         </>
