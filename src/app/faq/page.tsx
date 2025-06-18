@@ -1,7 +1,6 @@
 "use client";
 
 import {useState} from "react";
-import {BackButton} from "@/components/common/BackButton";
 import {AnimatedButton, AnimatedElement, AnimatedPage} from "@/components/common/AnimatedPage";
 import {Header} from "@/components/layouts/Header";
 import {Footer} from "@/components/layouts/Footer";
@@ -129,7 +128,6 @@ export default function FAQ() {
                 <div className="flex flex-col w-full max-w-screen-lg mx-auto gap-8 bg-white min-h-screen p-6">
                     <AnimatedElement delay={0.1}>
                         <div className="flex flex-col gap-4">
-                            <BackButton />
                             <h1 className="text-3xl sm:text-4xl font-bold uppercase text-gray-900">
                                 Frequently Asked Questions
                             </h1>
