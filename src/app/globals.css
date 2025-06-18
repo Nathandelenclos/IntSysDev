@@ -61,3 +61,7 @@ body {
 .article-content em {
   @apply italic;
 }
+
+/* Animation fade-in pour les sections attractives */
+.animate-fade-in { animation: fadeIn 1s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: none; } }

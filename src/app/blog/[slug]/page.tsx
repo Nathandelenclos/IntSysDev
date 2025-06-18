@@ -1,18 +1,58 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { useParams } from "next/navigation";
-import { getArticleBySlug } from "@/utils/articles";
+import {useParams} from "next/navigation";
+import {useState} from "react";
+import {getArticleBySlug} from "@/utils/articles";
 import {BackButton} from "@/components/common/BackButton";
+import CommentForm from "@/components/blog/CommentForm";
+import {Comment} from "@/types/article";
+import {useAuth} from "@/contexts/AuthContext";
 
 export default function Post() {
     const { slug } = useParams();
     const article = getArticleBySlug(slug as string);
+    const [showCommentForm, setShowCommentForm] = useState(false);
+    const [comments, setComments] = useState<Comment[]>(article?.comments || []);
+    const { user } = useAuth();
 
     if (!article) {
         return <div>Article not found</div>;
     }
+
+    const handleCommentAdded = (newComment: Comment) => {
+        setComments(prevComments => [newComment, ...prevComments]);
+    };
+
+    const handleLeaveComment = () => {
+        if (!user) {
+            alert("Please log in to leave a comment");
+            return;
+        }
+        setShowCommentForm(true);
+    };
+
+    const handleCancelComment = () => {
+        setShowCommentForm(false);
+    };
+
+    const handleLike = () => {
+        if (!user) {
+            alert("Please log in to like this article");
+            return;
+        }
+        // Here you would implement the like functionality
+        alert("Article liked!");
+    };
+
+    const handleCommentLike = (commentId: number) => {
+        if (!user) {
+            alert("Please log in to like comments");
+            return;
+        }
+        // Here you would implement the comment like functionality
+        alert("Comment liked!");
+    };
 
     return (
         <>
@@ -22,7 +62,14 @@ export default function Post() {
                         <BackButton />
                         <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">{article.title}</h2>
                     </div>
-                    <Link href="#" className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base">Like</Link>
+                    {user && (
+                        <button 
+                            onClick={handleLike}
+                            className="bg-[#FFD600] hover:bg-[#E6C200] rounded-md px-4 py-2 font-bold text-sm sm:text-base transition-colors duration-200"
+                        >
+                            Like
+                        </button>
+                    )}
                 </div>
 
                 <div className="flex flex-col bg-white p-6 sm:p-8 rounded-xl gap-4">
@@ -35,40 +82,72 @@ export default function Post() {
                         </div>
                         <div className="flex gap-2 items-center">
                             <Image src={"/icons/calandar.svg"} alt={"calandar"} width={16} height={16} />
-                            <p className="font-bold">{new Date(article.date).toLocaleDateString('fr-FR')}</p>
+                            <p className="font-bold">{new Date(article.date).toLocaleDateString('en-US')}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center px-4 gap-4">
                     <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">Comments</h2>
-                    <Link href="#" className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base">Leave a comment</Link>
+                    {user && (
+                        <button 
+                            onClick={handleLeaveComment}
+                            className="bg-[#FFD600] hover:bg-[#E6C200] rounded-md px-4 py-2 font-bold text-sm sm:text-base transition-colors duration-200"
+                        >
+                            Leave a comment
+                        </button>
+                    )}
                 </div>
 
-                {article.comments.map((comment) => (
-                    <div
-                        key={comment.id}
-                        className="flex flex-col sm:flex-row gap-6 px-6 py-6 bg-white rounded-xl justify-between items-start sm:items-center"
-                    >
-                        <div className="flex flex-col gap-2 text-sm sm:text-base">
-                            <p>{comment.content}</p>
-                            <div className="flex flex-wrap gap-4 text-sm">
-                                <div className="flex gap-2 items-center">
-                                    <Image src={"/icons/user.svg"} alt={"user"} width={16} height={16} />
-                                    <p className="font-bold">{comment.author}</p>
-                                </div>
-                                <div className="flex gap-2 items-center">
-                                    <Image src={"/icons/calandar.svg"} alt={"calandar"} width={16} height={16} />
-                                    <p className="font-bold">{new Date(comment.date).toLocaleDateString('fr-FR')}</p>
-                                </div>
-                            </div>
-                        </div>
+                {showCommentForm && (
+                    <div className="px-4">
+                        <CommentForm
+                            articleSlug={slug as string}
+                            onCommentAdded={handleCommentAdded}
+                            onCancel={handleCancelComment}
+                        />
+                    </div>
+                )}
 
-                        <div>
-                            <Link href="#" className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base">Like</Link>
+                {comments.length === 0 ? (
+                    <div className="px-4">
+                        <div className="bg-white p-6 rounded-xl text-center">
+                            <p className="text-gray-500">No comments yet. Be the first to comment!</p>
                         </div>
                     </div>
-                ))}
+                ) : (
+                    comments.map((comment) => (
+                        <div
+                            key={comment.id}
+                            className="flex flex-col sm:flex-row gap-6 px-6 py-6 bg-white rounded-xl justify-between items-start sm:items-center"
+                        >
+                            <div className="flex flex-col gap-2 text-sm sm:text-base">
+                                <p>{comment.content}</p>
+                                <div className="flex flex-wrap gap-4 text-sm">
+                                    <div className="flex gap-2 items-center">
+                                        <Image src={"/icons/user.svg"} alt={"user"} width={16} height={16} />
+                                        <p className="font-bold">{comment.author}</p>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <Image src={"/icons/calandar.svg"} alt={"calandar"} width={16} height={16} />
+                                        <p className="font-bold">{new Date(comment.date).toLocaleDateString('en-US')}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {user && (
+                                <div>
+                                    <button 
+                                        onClick={() => handleCommentLike(comment.id)}
+                                        className="bg-[#FFD600] hover:bg-[#E6C200] rounded-md px-4 py-2 font-bold text-sm sm:text-base transition-colors duration-200"
+                                    >
+                                        Like
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    ))
+                )}
             </div>
         </>
     );
