@@ -5,6 +5,7 @@ import Image from "next/image";
 import {Connect} from "@/components/icons/Connect";
 import {useState} from "react";
 import {Dropdown, DropdownProps} from "@/components/common/Dropdown";
+import {useAuth} from "@/contexts/AuthContext";
 
 export type NavItem = {
     label: string;
@@ -13,6 +14,8 @@ export type NavItem = {
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+    const { user, logout } = useAuth();
     const navItems: (NavItem | DropdownProps)[] = [
         { label: "CLUBS", href: "/clubs" },
         { label: "BLOG", href: "/blog" },
@@ -40,7 +43,7 @@ export const Header = () => {
             items: [
                 { label: "Contact", href: "/contact" },
                 { label: "About us", href: "/about-us" },
-                { label: "Kids' area", href: "/kids" },
+                { label: "Kids' area", href: "/kids-area" },
             ]
         },
     ];
@@ -74,11 +77,42 @@ export const Header = () => {
                 </div>
 
                 <div className="hidden md:flex items-center space-x-4">
-                    <Link href="/login" className="text-white hover:text-[#ffd600] flex items-center gap-2">
-                        <Connect />
-                        Connect
-                    </Link>
-                    <Link href="/register" className="bg-[#ffd600] text-black font-bold px-6 py-2">REGISTER</Link>
+                    {user ? (
+                        <div className="relative">
+                            <button
+                                onClick={() => setIsProfileOpen(!isProfileOpen)}
+                                className="flex items-center gap-2 text-white hover:text-[#ffd600] transition-colors"
+                            >
+                                <span className="font-bold">{user.name}</span>
+                                <svg
+                                    className={`w-4 h-4 transition-transform ${isProfileOpen ? 'rotate-180' : ''}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {isProfileOpen && (
+                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                                    <button
+                                        onClick={logout}
+                                        className="w-full text-left px-4 py-2 text-gray-800 hover:bg-[#ffd600] hover:text-black"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <>
+                            <Link href="/login" className="text-white hover:text-[#ffd600] flex items-center gap-2">
+                                <Connect />
+                                Connect
+                            </Link>
+                            <Link href="/register" className="bg-[#ffd600] text-black font-bold px-6 py-2">REGISTER</Link>
+                        </>
+                    )}
                 </div>
 
                 <button className="md:hidden text-white text-2xl" onClick={() => setIsOpen(!isOpen)}>
@@ -105,13 +139,27 @@ export const Header = () => {
                         );
                     })}
                     <hr className="border-gray-600" />
-                    <Link href="/login" className="text-white hover:text-[#ffd600] flex items-center gap-2">
-                        <Connect />
-                        Connect
-                    </Link>
-                    <Link href="/register" className="bg-[#ffd600] text-black font-bold px-4 py-2 w-fit">
-                        REGISTER
-                    </Link>
+                    {user ? (
+                        <div className="flex flex-col gap-4">
+                            <button
+                                onClick={logout}
+                                className="text-white hover:text-[#ffd600] flex items-center gap-2"
+                            >
+                                <Connect />
+                                Logout
+                            </button>
+                        </div>
+                    ) : (
+                        <>
+                            <Link href="/login" className="text-white hover:text-[#ffd600] flex items-center gap-2">
+                                <Connect />
+                                Connect
+                            </Link>
+                            <Link href="/register" className="bg-[#ffd600] text-black font-bold px-4 py-2 w-fit">
+                                REGISTER
+                            </Link>
+                        </>
+                    )}
                 </div>
             )}
         </nav>

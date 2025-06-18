@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {useRef} from "react";
 import {Editor} from "@tinymce/tinymce-react";
-
+import {BackButton} from "@/components/common/BackButton";
 
 export default function CreatePost() {
     const editorRef = useRef(null);
@@ -15,15 +15,26 @@ export default function CreatePost() {
         <>
             <div className="flex flex-col w-full max-w-screen-lg mx-auto gap-8">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">
-                        Create Your Post
-                    </h2>
-                    <Link
-                        href="/blog"
-                        className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base"
-                    >
-                        Publish
-                    </Link>
+                    <div className="flex flex-col gap-4">
+                        <BackButton />
+                        <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">
+                            Create Your Post
+                        </h2>
+                    </div>
+                    <div className="flex flex-row gap-2">
+                        <Link
+                            href="/blog"
+                            className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base"
+                        >
+                            Publish
+                        </Link>
+                        <Link
+                            href="/blog"
+                            className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base"
+                        >
+                            Save as Draft
+                        </Link>
+                    </div>
                 </div>
 
                 <input

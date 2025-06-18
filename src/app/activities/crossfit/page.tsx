@@ -6,6 +6,7 @@ import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/c
 import Image from "next/image";
 import schedules from "@/data/schedules.json";
 import coaches from "@/data/coaches.json";
+import {BackButton} from "@/components/common/BackButton";
 
 const features = [
     {

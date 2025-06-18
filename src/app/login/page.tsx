@@ -1,9 +1,36 @@
+"use client";
+
 import {Header} from "@/components/layouts/Header";
 import {Footer} from "@/components/layouts/Footer";
 import {H2} from "@/components/typo/H2";
 import Link from "next/link";
+import {useAuth} from "@/contexts/AuthContext";
+import {useRouter} from "next/navigation";
+import {useState} from "react";
 
 export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const { login } = useAuth();
+    const router = useRouter();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError("");
+        
+        try {
+            const success = await login(email, password);
+            if (success) {
+                router.push("/");
+            } else {
+                setError("Invalid email or password");
+            }
+        } catch (err) {
+            setError("An error occurred. Please try again.");
+        }
+    };
+
     return (
         <main className="min-h-screen">
             <Header />
@@ -11,20 +38,35 @@ export default function Login() {
             <section className="h-[800px] bg-[url(/backgrounds/login.png)] bg-cover overflow-hidden">
                 <div className="flex flex-col flex-start gap-8 h-full justify-center m-12 max-w-[450px]">
                     <H2>Login</H2>
-                    <div className="flex flex-col gap-8">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-8">
                         <div className="flex flex-col gap-4">
-                            <input type="email" placeholder="Email" className="w-full p-3 border border-gray-300 bg-white" />
-                            <input type="password" placeholder="Password" className="w-full p-3 border border-gray-300 bg-white" />
-                            <Link href="/login" className="bg-[#003A5E] text-white py-4 font-bold justify-center flex">
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className="w-full p-3 border border-gray-300 bg-white"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                className="w-full p-3 border border-gray-300 bg-white"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                            {error && <p className="text-red-500 text-sm">{error}</p>}
+                            <button type="submit" className="bg-[#003A5E] text-white py-4 font-bold justify-center flex">
                                 Login
-                            </Link>
+                            </button>
                         </div>
                         <hr className="bg-gray-600"/>
                         <Link href="/register" className="w-full text-center">Or register</Link>
-                    </div>
+                    </form>
                 </div>
             </section>
             <Footer />
         </main>
-    )
+    );
 }

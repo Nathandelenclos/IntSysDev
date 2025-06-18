@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { getArticleBySlug } from "@/utils/articles";
+import {BackButton} from "@/components/common/BackButton";
 
 export default function Post() {
     const { slug } = useParams();
@@ -17,7 +18,10 @@ export default function Post() {
         <>
             <div className="flex flex-col w-full max-w-screen-lg mx-auto gap-8">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center px-4 gap-4">
-                    <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">{article.title}</h2>
+                    <div className="flex flex-col gap-4">
+                        <BackButton />
+                        <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">{article.title}</h2>
+                    </div>
                     <Link href="#" className="bg-[#FFD600] rounded-md px-4 py-2 font-bold text-sm sm:text-base">Like</Link>
                 </div>
 

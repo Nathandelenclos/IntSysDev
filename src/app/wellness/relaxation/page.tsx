@@ -5,6 +5,7 @@ import {H2} from "@/components/typo/H2";
 import {Coach} from "@/types/activity";
 import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/components/activities";
 import Image from "next/image";
+import {BackButton} from "@/components/common/BackButton";
 
 const relaxationSchedule = {
     schedules: [
