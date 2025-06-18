@@ -190,10 +190,10 @@ export default function FAQ() {
                     <AnimatedElement delay={0.4}>
                         <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
                             <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                Can't find your answer?
+                                Can&#39;t find your answer?
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base mb-4">
-                                Our team is here to help. Don't hesitate to contact us.
+                                Our team is here to help. Don&#39;t hesitate to contact us.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <AnimatedButton className="bg-[#FFD600] text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-500 transition-colors">

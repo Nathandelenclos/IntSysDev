@@ -2,14 +2,13 @@
 
 import {useState} from "react";
 import {AnimatedButton, AnimatedElement, AnimatedPage} from "@/components/common/AnimatedPage";
-import {getCategories, getProducts, getProductsByCategory} from "@/services/healthy-products";
+import {getCategories, getProductsByCategory} from "@/services/healthy-products";
 import {Product, ProductCategory} from "@/types/healthy-products";
 
 export default function CoinHealthy() {
     const [selectedCategory, setSelectedCategory] = useState<ProductCategory>('all');
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-    const products = getProducts();
     const categories = getCategories();
     const filteredProducts = getProductsByCategory(selectedCategory);
 
