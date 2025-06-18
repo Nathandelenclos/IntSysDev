@@ -11,7 +11,7 @@ export default function ActivitiesLayout({
     return (
         <main className="min-h-screen">
             <Header />
-            <div className="bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)]">
+            <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100">
                 <Breadcrumb />
                 {children}
             </div>

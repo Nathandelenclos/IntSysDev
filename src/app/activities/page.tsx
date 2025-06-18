@@ -37,7 +37,7 @@ const activities = [
 
 export default function ActivitiesPage() {
     return (
-        <div className="min-h-screen bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)]">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
             {/* Hero Section */}
             <div className="relative h-[70vh] overflow-hidden">
                 <div className="absolute inset-0">
@@ -48,7 +48,7 @@ export default function ActivitiesPage() {
                         className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-black/30" />
                 </div>
                 <div className="relative h-full flex items-center justify-center text-center px-4">
                     <div className="max-w-4xl">
@@ -72,19 +72,19 @@ export default function ActivitiesPage() {
                             key={index}
                             className="group"
                         >
-                            <div className="relative h-[500px] rounded-xl overflow-hidden">
+                            <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                                 <Image
                                     src={activity.image}
                                     alt={activity.title}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
                                 <div className="absolute bottom-0 left-0 right-0 p-8">
                                     <h3 className="text-3xl font-bold text-white mb-4">{activity.title}</h3>
-                                    <p className="text-gray-200 mb-6 text-lg">{activity.description}</p>
+                                    <p className="text-gray-100 mb-6 text-lg">{activity.description}</p>
                                     <div 
-                                        className="inline-block px-8 py-3 rounded-full text-white font-semibold transition-all duration-300"
+                                        className="inline-block px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 shadow-lg"
                                         style={{ backgroundColor: activity.color }}
                                     >
                                         Join Now
@@ -96,8 +96,8 @@ export default function ActivitiesPage() {
                 </div>
 
                 {/* Benefits Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Why Train With Us?</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Why Train With Us?</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             "Expert coaches",
@@ -109,23 +109,23 @@ export default function ActivitiesPage() {
                             "Clean facilities",
                             "Results-driven approach"
                         ].map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-4 bg-white/5 p-4 rounded-lg transform transition-all duration-300 hover:scale-105">
-                                <div className="w-10 h-10 bg-[#FFD600] rounded-full flex items-center justify-center flex-shrink-0">
+                            <div key={index} className="flex items-center gap-4 bg-blue-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 border border-blue-200">
+                                <div className="w-10 h-10 bg-[#FFD600] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                                     <span className="text-black font-bold">✓</span>
                                 </div>
-                                <p className="text-white">{benefit}</p>
+                                <p className="text-gray-700 font-medium">{benefit}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center bg-gradient-to-r from-[#FFD600] via-[#4CAF50] to-[#FF1493] rounded-xl p-12 mb-16">
+                <div className="text-center bg-gradient-to-r from-[#FFD600] via-[#4CAF50] to-[#FF1493] rounded-xl p-12 mb-16 shadow-xl">
                     <h3 className="text-3xl font-bold text-white mb-4">Ready to Start Your Fitness Journey?</h3>
                     <p className="text-white text-lg mb-8">Join our community and discover the perfect activity for your fitness goals</p>
                     <Link 
                         href="/activities/crossfit"
-                        className="inline-block px-8 py-4 bg-white text-[#012E4A] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                        className="inline-block px-8 py-4 bg-white text-gray-800 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                         Find Your Activity
                     </Link>

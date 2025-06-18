@@ -3,6 +3,7 @@
 import {H3} from "@/components/typo/H3";
 import {Card} from "@/components/ui/Card";
 import {Badge} from "@/components/ui/Badge";
+import {useToast} from "@/contexts/ToastContext";
 
 interface Reservation {
     id: string;
@@ -52,6 +53,8 @@ const mockReservations: Reservation[] = [
 ];
 
 export function Reservations() {
+    const { showToast } = useToast();
+
     const getStatusVariant = (status: Reservation['status']) => {
         switch (status) {
             case 'confirmed':
@@ -63,55 +66,83 @@ export function Reservations() {
         }
     };
 
+    const handleReschedule = (reservation: Reservation) => {
+        showToast({
+            type: "info",
+            title: "Reschedule Feature",
+            message: "Reschedule feature coming soon!",
+            duration: 4000
+        });
+    };
+
+    const handleCancel = (reservation: Reservation) => {
+        showToast({
+            type: "warning",
+            title: "Cancel Reservation",
+            message: `Are you sure you want to cancel your ${reservation.activity} session?`,
+            duration: 5000
+        });
+    };
+
+    const handleBookNew = () => {
+        showToast({
+            type: "info",
+            title: "Book New Activity",
+            message: "Redirecting to activities page...",
+            duration: 3000
+        });
+    };
+
     return (
         <Card>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
                     <H3>Recent Reservations</H3>
-                    <button className="bg-[#0A4D68] hover:bg-[#0A4D68]/80 text-white py-2 px-4 rounded-lg transition-colors text-sm">
+                    <button 
+                        onClick={handleBookNew}
+                        className="bg-[#0A4D68] hover:bg-[#0A4D68]/80 text-white py-2 px-4 rounded-lg transition-colors text-sm"
+                    >
                         Book New Activity
                     </button>
                 </div>
                 <div className="space-y-4">
                     {mockReservations.map((reservation) => (
-                        <div key={reservation.id} className="p-4 bg-[#0A4D68]/20 rounded-lg">
-                            <div className="flex items-center justify-between mb-3">
+                        <div key={reservation.id} className="bg-[#0A4D68] rounded-lg p-4">
+                            <div className="flex justify-between items-start mb-3">
                                 <div>
-                                    <h4 className="text-white font-medium">{reservation.activity}</h4>
-                                    <p className="text-gray-400 text-sm">
-                                        {new Date(reservation.date).toLocaleDateString()} at {reservation.time}
-                                    </p>
+                                    <h4 className="text-white font-semibold">{reservation.activity}</h4>
+                                    <p className="text-gray-300 text-sm">{reservation.date} at {reservation.time}</p>
+                                    <p className="text-gray-300 text-sm">{reservation.location}</p>
                                 </div>
                                 <Badge variant={getStatusVariant(reservation.status)}>
-                                    {reservation.status.charAt(0).toUpperCase() + reservation.status.slice(1)}
+                                    {reservation.status}
                                 </Badge>
                             </div>
-                            
-                            <div className="grid grid-cols-2 gap-4 text-sm">
-                                <div>
-                                    <p className="text-gray-400">Location</p>
-                                    <p className="text-white">{reservation.location}</p>
-                                </div>
-                                {reservation.instructor && (
-                                    <div>
-                                        <p className="text-gray-400">Instructor</p>
-                                        <p className="text-white">{reservation.instructor}</p>
-                                    </div>
-                                )}
-                                <div>
-                                    <p className="text-gray-400">Participants</p>
-                                    <p className="text-white">
-                                        {reservation.participants}/{reservation.maxParticipants}
-                                    </p>
-                                </div>
+
+                            {reservation.instructor && (
+                                <p className="text-gray-300 text-sm mb-3">
+                                    Instructor: {reservation.instructor}
+                                </p>
+                            )}
+
+                            <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-300">
+                                    {reservation.participants}/{reservation.maxParticipants} participants
+                                </span>
                             </div>
 
                             {reservation.status === 'confirmed' && (
                                 <div className="mt-4 pt-4 border-t border-[#0A4D68] flex justify-end gap-2">
-                                    <button className="text-gray-400 hover:text-white transition-colors text-sm">
+                                    <button 
+                                        onClick={() => handleReschedule(reservation)}
+                                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                                    >
                                         Reschedule
                                     </button>
-                                    <button className="text-red-400 hover:text-red-300 transition-colors text-sm">
+                                    <button 
+                                        onClick={() => handleCancel(reservation)}
+                                        className="text-red-400 hover:text-red-300 transition-colors text-sm"
+                                    >
                                         Cancel
                                     </button>
                                 </div>

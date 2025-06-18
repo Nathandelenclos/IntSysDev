@@ -3,6 +3,7 @@
 import {H3} from "@/components/typo/H3";
 import {Card} from "@/components/ui/Card";
 import {Badge} from "@/components/ui/Badge";
+import {useToast} from "@/contexts/ToastContext";
 
 interface Article {
     id: string;
@@ -57,6 +58,8 @@ const mockArticles: Article[] = [
 ];
 
 export function PublishedArticles() {
+    const { showToast } = useToast();
+
     const getStatusVariant = (status: Article['status']) => {
         switch (status) {
             case 'published':
@@ -68,29 +71,47 @@ export function PublishedArticles() {
         }
     };
 
+    const handleWriteNewArticle = () => {
+        showToast({
+            type: "info",
+            title: "Create New Article",
+            message: "Redirecting to article creation page...",
+            duration: 3000
+        });
+    };
+
     return (
         <Card>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
                     <H3>Published Articles</H3>
-                    <button className="bg-[#0A4D68] hover:bg-[#0A4D68]/80 text-white py-2 px-4 rounded-lg transition-colors text-sm">
+                    <button 
+                        onClick={handleWriteNewArticle}
+                        className="bg-[#0A4D68] hover:bg-[#0A4D68]/80 text-white py-2 px-4 rounded-lg transition-colors text-sm"
+                    >
                         Write New Article
                     </button>
                 </div>
                 <div className="space-y-4">
                     {mockArticles.map((article) => (
-                        <div key={article.id} className="p-4 bg-[#0A4D68]/20 rounded-lg">
-                            <div className="flex items-center justify-between mb-2">
-                                <div className="flex items-center gap-2">
-                                    <Badge variant="secondary">{article.category}</Badge>
-                                    <span className="text-gray-400 text-sm">{article.readTime}</span>
+                        <div key={article.id} className="bg-[#0A4D68] rounded-lg p-4">
+                            <div className="flex justify-between items-start mb-3">
+                                <div className="flex-1">
+                                    <h4 className="text-white font-semibold mb-1">{article.title}</h4>
+                                    <p className="text-gray-300 text-sm mb-2">{article.excerpt}</p>
+                                    <div className="flex items-center gap-4 text-xs text-gray-400">
+                                        <span>{article.category}</span>
+                                        <span>•</span>
+                                        <span>{article.readTime}</span>
+                                        <span>•</span>
+                                        <span>{new Date(article.date).toLocaleDateString()}</span>
+                                    </div>
                                 </div>
                                 <Badge variant={getStatusVariant(article.status)}>
-                                    {article.status.charAt(0).toUpperCase() + article.status.slice(1)}
+                                    {article.status}
                                 </Badge>
                             </div>
-                            <h4 className="text-white font-medium mb-2">{article.title}</h4>
-                            <p className="text-gray-400 text-sm mb-3">{article.excerpt}</p>
+
                             <div className="flex items-center justify-between">
                                 <div className="flex gap-4 text-sm">
                                     <div className="flex items-center gap-1 text-gray-400">
@@ -112,18 +133,6 @@ export function PublishedArticles() {
                                         </svg>
                                         {article.comments}
                                     </div>
-                                </div>
-                                <div className="flex gap-2">
-                                    {article.status === 'draft' && (
-                                        <button className="text-gray-400 hover:text-white transition-colors text-sm">
-                                            Edit
-                                        </button>
-                                    )}
-                                    {article.status === 'published' && (
-                                        <button className="text-gray-400 hover:text-white transition-colors text-sm">
-                                            View
-                                        </button>
-                                    )}
                                 </div>
                             </div>
                         </div>

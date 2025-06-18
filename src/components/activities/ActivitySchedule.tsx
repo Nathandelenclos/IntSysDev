@@ -37,22 +37,22 @@ export function ActivitySchedule({ schedule }: ActivityScheduleProps) {
     return (
         <div className="flex flex-col gap-4">
             {Object.values(groupedSchedules).map((group, index) => (
-                <div key={index} className="flex flex-col gap-2 bg-gray-800 p-4 rounded-lg">
+                <div key={index} className="flex flex-col gap-2 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex flex-wrap gap-1">
                         {group.days.map((day, dayIndex) => (
-                            <span key={day} className="font-medium text-white">
+                            <span key={day} className="font-medium text-gray-800">
                                 {day}
                                 {dayIndex < group.days.length - 1 && ","}
                             </span>
                         ))}
-                        <span className="text-white">:</span>
+                        <span className="text-gray-800">:</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                         {group.timeSlots.map((slot, slotIndex) => (
                             <span 
                                 key={slotIndex} 
-                                className="text-white font-medium"
-                                style={{ color: slot.color || "#FFFFFF" }}
+                                className="text-gray-700 font-medium"
+                                style={{ color: slot.color || "#6B7280" }}
                             >
                                 {formatTimeSlot(slot)}
                                 {slotIndex < group.timeSlots.length - 1 && ","}

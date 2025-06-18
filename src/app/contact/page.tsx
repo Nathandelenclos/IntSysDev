@@ -1,10 +1,53 @@
+"use client";
+
 import {Header} from "@/components/layouts/Header";
 import {Footer} from "@/components/layouts/Footer";
 import {H2} from "@/components/typo/H2";
 import Image from "next/image";
 import Link from "next/link";
+import {useState} from "react";
+import {useToast} from "@/contexts/ToastContext";
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        content: ""
+    });
+    const { showToast } = useToast();
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        // Simuler l'envoi du message
+        console.log("Message sent:", formData);
+        
+        // Afficher le toast de succès
+        showToast({
+            type: "success",
+            title: "Message Sent!",
+            message: "Your message has been sent successfully. We'll get back to you soon!",
+            duration: 5000
+        });
+        
+        // Réinitialiser le formulaire
+        setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            content: ""
+        });
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
     return (
         <main className="min-h-screen">
             <Header />
@@ -23,21 +66,48 @@ export default function Contact() {
                                 <p>fitnesspark@mail.com</p>
                             </Link>
                         </div>
-                        <div className="flex flex-col gap-4">
-                            <input type="email" placeholder="Your Name" className="w-full p-3 border border-gray-300 bg-white" />
-                            <input type="email" placeholder="Your Email" className="w-full p-3 border border-gray-300 bg-white" />
-                            <input type="email" placeholder="Your Subject" className="w-full p-3 border border-gray-300 bg-white" />
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                            <input 
+                                type="text" 
+                                name="name"
+                                placeholder="Your Name" 
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full p-3 border border-gray-300 bg-white" 
+                                required
+                            />
+                            <input 
+                                type="email" 
+                                name="email"
+                                placeholder="Your Email" 
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full p-3 border border-gray-300 bg-white" 
+                                required
+                            />
+                            <input 
+                                type="text" 
+                                name="subject"
+                                placeholder="Your Subject" 
+                                value={formData.subject}
+                                onChange={handleChange}
+                                className="w-full p-3 border border-gray-300 bg-white" 
+                                required
+                            />
                             <textarea
                                 className="w-full p-3 border border-gray-300 bg-white"
                                 name="content"
-                                id="content"
+                                placeholder="Your Message"
+                                value={formData.content}
+                                onChange={handleChange}
                                 cols={20}
                                 rows={5}
+                                required
                             ></textarea>
-                        </div>
-                        <button className="bg-[#003A5E] text-white py-4 font-bold">
-                            Send Message
-                        </button>
+                            <button type="submit" className="bg-[#003A5E] text-white py-4 font-bold">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>

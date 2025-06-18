@@ -11,25 +11,37 @@ const massageSchedule = {
         {
             day: "Monday",
             timeSlots: [
-                { start: "10:00", end: "11:00", color: "#9B6B9E" },
-                { start: "14:00", end: "15:00", color: "#9B6B9E" },
-                { start: "16:00", end: "17:00", color: "#9B6B9E" }
+                { start: "09:00", end: "19:00", color: "#9B6B9E" }
+            ]
+        },
+        {
+            day: "Tuesday",
+            timeSlots: [
+                { start: "09:00", end: "19:00", color: "#9B6B9E" }
             ]
         },
         {
             day: "Wednesday",
             timeSlots: [
-                { start: "10:00", end: "11:00", color: "#9B6B9E" },
-                { start: "14:00", end: "15:00", color: "#9B6B9E" },
-                { start: "16:00", end: "17:00", color: "#9B6B9E" }
+                { start: "09:00", end: "19:00", color: "#9B6B9E" }
+            ]
+        },
+        {
+            day: "Thursday",
+            timeSlots: [
+                { start: "09:00", end: "19:00", color: "#9B6B9E" }
             ]
         },
         {
             day: "Friday",
             timeSlots: [
-                { start: "10:00", end: "11:00", color: "#9B6B9E" },
-                { start: "14:00", end: "15:00", color: "#9B6B9E" },
-                { start: "16:00", end: "17:00", color: "#9B6B9E" }
+                { start: "09:00", end: "19:00", color: "#9B6B9E" }
+            ]
+        },
+        {
+            day: "Saturday",
+            timeSlots: [
+                { start: "10:00", end: "17:00", color: "#9B6B9E" }
             ]
         }
     ]
@@ -38,59 +50,59 @@ const massageSchedule = {
 const coaches: Coach[] = [
     {
         id: "1",
-        name: "Sophie Martin",
-        role: "Massage Therapist",
-        imageUrl: "/coaches/sophie.jpg",
-        bio: "With over 10 years of experience in various massage techniques, Sophie specializes in deep tissue and relaxation massages. Her gentle approach and attention to detail ensure a personalized experience for each client.",
-        specialties: ["Deep Tissue", "Swedish Massage", "Sports Massage"],
+        name: "Marie Laurent",
+        role: "Senior Massage Therapist",
+        imageUrl: "/coaches/marie.jpg",
+        bio: "With over 15 years of experience in therapeutic massage, Marie specializes in deep tissue massage and sports recovery. Her expertise helps clients achieve optimal relaxation and pain relief.",
+        specialties: ["Deep Tissue Massage", "Sports Massage", "Therapeutic Massage"],
         certifications: [
-            "Certified Massage Therapist",
-            "Sports Massage Specialist",
-            "Aromatherapy Practitioner"
+            "Licensed Massage Therapist",
+            "Sports Massage Certification",
+            "Deep Tissue Specialist"
         ]
     },
     {
         id: "2",
-        name: "Lucas Dubois",
-        role: "Wellness Specialist",
-        imageUrl: "/coaches/lucas.jpg",
-        bio: "A certified wellness practitioner with expertise in therapeutic massage and bodywork. Lucas combines traditional techniques with modern approaches to provide holistic healing and relaxation.",
-        specialties: ["Therapeutic Massage", "Reflexology", "Energy Work"],
+        name: "Pierre Dubois",
+        role: "Wellness Massage Specialist",
+        imageUrl: "/coaches/pierre.jpg",
+        bio: "Pierre focuses on relaxation and wellness massage techniques. His gentle approach and attention to detail create a truly rejuvenating experience for all clients.",
+        specialties: ["Relaxation Massage", "Swedish Massage", "Aromatherapy"],
         certifications: [
-            "Therapeutic Massage Certification",
-            "Reflexology Practitioner",
-            "Energy Healing Specialist"
+            "Wellness Massage Certification",
+            "Aromatherapy Specialist",
+            "Relaxation Therapy Expert"
         ]
     }
 ];
 
 const features = [
     {
-        title: "Professional Care",
-        description: "Expert therapists with years of experience",
-        icon: "👐"
+        title: "Deep Tissue Massage",
+        description: "Targeted therapy for muscle tension and chronic pain",
+        icon: "💆‍♀️"
     },
     {
-        title: "Various Techniques",
-        description: "Choose from different massage styles",
-        icon: "💆"
+        title: "Relaxation Massage",
+        description: "Gentle techniques for stress relief and relaxation",
+        icon: "🧘‍♀️"
     },
     {
-        title: "Relaxing Environment",
-        description: "Peaceful setting for complete relaxation",
-        icon: "✨"
+        title: "Sports Massage",
+        description: "Specialized massage for athletes and active individuals",
+        icon: "🏃‍♂️"
     },
     {
-        title: "Personalized Treatment",
-        description: "Tailored to your specific needs",
-        icon: "🎯"
+        title: "Aromatherapy",
+        description: "Enhanced experience with therapeutic essential oils",
+        icon: "🌸"
     }
 ];
 
 export default function MassagePage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [day, setDay] = useState("Monday");
-    const [time, setTime] = useState("10:00");
+    const [time, setTime] = useState("10:00 AM");
     
     const handleTimeSlotClick = (day: string, time: string) => {
         setIsModalOpen(true);
@@ -99,18 +111,18 @@ export default function MassagePage() {
     }
 
     return (
-        <div className="min-h-screen bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)]">
-            {/* Hero Section with Parallax Effect */}
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100">
+            {/* Hero Section */}
             <div className="relative h-[70vh] overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
                         src="/wellness/massage-hero.jpg"
-                        alt="Professional Massage"
+                        alt="Professional Massage Therapy"
                         fill
                         className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-black/30" />
                 </div>
                 <div className="relative h-full flex items-center justify-center text-center px-4">
                     <div className="max-w-4xl">
@@ -118,12 +130,12 @@ export default function MassagePage() {
                             <H2>Massage Therapy</H2>
                         </div>
                         <p className="text-white text-xl md:text-2xl mt-4 max-w-2xl mx-auto leading-relaxed">
-                            Experience the healing power of professional massage therapy. Our expert therapists 
-                            provide personalized treatments to help you relax, recover, and rejuvenate your body and mind.
+                            Experience professional massage therapy in a serene environment. Our skilled therapists offer a range of 
+                            massage techniques to promote relaxation, relieve tension, and enhance your overall well-being.
                         </p>
                         <button 
                             onClick={() => handleTimeSlotClick("Monday", "10:00")}
-                            className="mt-8 px-8 py-4 bg-[#9B6B9E] text-white rounded-full text-lg font-semibold hover:bg-[#8A5A8D] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            className="mt-8 px-8 py-4 bg-[#9B6B9E] text-white rounded-full text-lg font-semibold hover:bg-[#8e5a8a] transition-all duration-300 transform hover:scale-105 shadow-lg"
                         >
                             Book Your Session
                         </button>
@@ -137,63 +149,61 @@ export default function MassagePage() {
                     {features.map((feature, index) => (
                         <div 
                             key={index}
-                            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-white transform transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                            className="bg-white/80 backdrop-blur-lg rounded-xl p-6 text-gray-800 transform transition-all duration-300 hover:scale-105 hover:bg-white/90 shadow-lg border border-gray-200"
                         >
                             <div className="text-4xl mb-4">{feature.icon}</div>
                             <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                            <p className="text-gray-200">{feature.description}</p>
+                            <p className="text-gray-600">{feature.description}</p>
                         </div>
                     ))}
                 </div>
 
                 {/* Benefits Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Benefits</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Benefits</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
+                            "Relieves muscle tension and pain",
                             "Reduces stress and anxiety",
-                            "Relieves muscle tension",
-                            "Improves circulation",
+                            "Improves circulation and flexibility",
                             "Enhances sleep quality",
-                            "Boosts immune system",
-                            "Promotes overall wellness"
+                            "Boosts immune system function",
+                            "Promotes overall relaxation"
                         ].map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-4 bg-white/5 p-4 rounded-lg transform transition-all duration-300 hover:scale-105">
-                                <div className="w-10 h-10 bg-[#9B6B9E] rounded-full flex items-center justify-center flex-shrink-0">
+                            <div key={index} className="flex items-center gap-4 bg-purple-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-purple-100 border border-purple-200">
+                                <div className="w-10 h-10 bg-[#9B6B9E] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                                     <span className="text-white font-bold">✓</span>
                                 </div>
-                                <p className="text-white">{benefit}</p>
+                                <p className="text-gray-700 font-medium">{benefit}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Schedule Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Available Sessions</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Appointment Hours</h3>
                     <div className="flex flex-col gap-8">
                         <ActivitySchedule schedule={massageSchedule} />
                         <WeeklySchedule schedule={massageSchedule} onCLickTimeSlot={handleTimeSlotClick} />
                     </div>
                 </div>
 
-                {/* Therapists Section */}
                 <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-white mb-8">Our Therapists</h3>
+                    <h3 className="text-3xl font-bold text-gray-800 mb-8">Our Massage Therapists</h3>
                     <div className="max-w-3xl mx-auto">
                         <CoachesSlider coaches={coaches} />
                     </div>
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center bg-[#9B6B9E] rounded-xl p-12 mb-16">
-                    <h3 className="text-3xl font-bold text-white mb-4">Ready to Experience True Relaxation?</h3>
-                    <p className="text-white text-lg mb-8">Book your massage session today and take the first step towards better wellness</p>
+                <div className="text-center bg-[#9B6B9E] rounded-xl p-12 mb-16 shadow-xl">
+                    <h3 className="text-3xl font-bold text-white mb-4">Ready to Experience Ultimate Relaxation?</h3>
+                    <p className="text-white text-lg mb-8">Book your massage session today and treat yourself to pure relaxation</p>
                     <button 
                         onClick={() => handleTimeSlotClick("Monday", "10:00")}
-                        className="px-8 py-4 bg-white text-[#9B6B9E] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                        className="px-8 py-4 bg-white text-[#9B6B9E] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
-                        Schedule Your Massage
+                        Book Now
                     </button>
                 </div>
             </div>

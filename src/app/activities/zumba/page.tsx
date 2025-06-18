@@ -6,26 +6,27 @@ import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/c
 import Image from "next/image";
 import schedules from "@/data/schedules.json";
 import coaches from "@/data/coaches.json";
+import {BackButton} from "@/components/common/BackButton";
 
 const features = [
     {
-        title: "Fun Workout",
-        description: "Dance your way to fitness with energetic Latin rhythms",
+        title: "Dance Fitness",
+        description: "Fun, energetic dance moves that get your heart pumping",
         icon: "💃"
     },
     {
-        title: "Cardio Boost",
-        description: "Burn calories while learning new dance moves",
+        title: "Cardio Workout",
+        description: "High-energy cardio exercise disguised as dance",
         icon: "❤️"
     },
     {
-        title: "No Experience Needed",
-        description: "Perfect for beginners and experienced dancers alike",
-        icon: "🌟"
+        title: "Latin Rhythms",
+        description: "Learn moves from salsa, merengue, and other Latin dances",
+        icon: "🎵"
     },
     {
-        title: "Group Energy",
-        description: "Join a vibrant community of dance enthusiasts",
+        title: "Community Fun",
+        description: "Join a vibrant community of dance fitness enthusiasts",
         icon: "👥"
     }
 ];
@@ -33,7 +34,7 @@ const features = [
 export default function ZumbaPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [day, setDay] = useState("Monday");
-    const [time, setTime] = useState("18:30");
+    const [time, setTime] = useState("6:00 PM");
     
     const handleTimeSlotClick = (day: string, time: string) => {
         setIsModalOpen(true);
@@ -42,17 +43,17 @@ export default function ZumbaPage() {
     }
 
     return (
-        <div className="min-h-screen bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)]">
+        <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100">
             <div className="relative h-[70vh] overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
                         src="/activities/zumba-hero.jpg"
-                        alt="Zumba Class"
+                        alt="Zumba Dance Fitness"
                         fill
                         className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-black/30" />
                 </div>
                 <div className="relative h-full flex items-center justify-center text-center px-4">
                     <div className="max-w-4xl">
@@ -60,14 +61,14 @@ export default function ZumbaPage() {
                             <H2>Zumba</H2>
                         </div>
                         <p className="text-white text-xl md:text-2xl mt-4 max-w-2xl mx-auto leading-relaxed">
-                            Experience the joy of Zumba - a high-energy dance fitness program that combines Latin and international 
-                            music with dynamic dance moves. It&#39;s a fun and effective way to get fit!
+                            Zumba is a high-energy dance fitness program that combines Latin and international music with dance moves. 
+                            It&#39;s a fun way to burn calories, improve cardiovascular health, and learn new dance moves.
                         </p>
                         <button 
-                            onClick={() => handleTimeSlotClick("Monday", "18:30")}
-                            className="mt-8 px-8 py-4 bg-[#FF1493] text-white rounded-full text-lg font-semibold hover:bg-[#ff1a9d] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            onClick={() => handleTimeSlotClick("Monday", "18:00")}
+                            className="mt-8 px-8 py-4 bg-[#FF1493] text-white rounded-full text-lg font-semibold hover:bg-[#e91e63] transition-all duration-300 transform hover:scale-105 shadow-lg"
                         >
-                            Join the Party
+                            Start Dancing
                         </button>
                     </div>
                 </div>
@@ -79,40 +80,40 @@ export default function ZumbaPage() {
                     {features.map((feature, index) => (
                         <div 
                             key={index}
-                            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-white transform transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                            className="bg-white/80 backdrop-blur-lg rounded-xl p-6 text-gray-800 transform transition-all duration-300 hover:scale-105 hover:bg-white/90 shadow-lg border border-gray-200"
                         >
                             <div className="text-4xl mb-4">{feature.icon}</div>
                             <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                            <p className="text-gray-200">{feature.description}</p>
+                            <p className="text-gray-600">{feature.description}</p>
                         </div>
                     ))}
                 </div>
 
                 {/* Benefits Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Benefits</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Benefits</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             "Burns calories effectively",
                             "Improves cardiovascular health",
                             "Enhances coordination and rhythm",
-                            "Reduces stress and anxiety",
-                            "Builds confidence through dance",
-                            "Creates a positive social environment"
+                            "Reduces stress and boosts mood",
+                            "Builds endurance and stamina",
+                            "No dance experience required"
                         ].map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-4 bg-white/5 p-4 rounded-lg transform transition-all duration-300 hover:scale-105">
-                                <div className="w-10 h-10 bg-[#FF1493] rounded-full flex items-center justify-center flex-shrink-0">
+                            <div key={index} className="flex items-center gap-4 bg-pink-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-pink-100 border border-pink-200">
+                                <div className="w-10 h-10 bg-[#FF1493] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                                     <span className="text-white font-bold">✓</span>
                                 </div>
-                                <p className="text-white">{benefit}</p>
+                                <p className="text-gray-700 font-medium">{benefit}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Schedule Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Class Schedule</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Class Schedule</h3>
                     <div className="flex flex-col gap-8">
                         <ActivitySchedule schedule={schedules.zumba} />
                         <WeeklySchedule schedule={schedules.zumba} onCLickTimeSlot={handleTimeSlotClick} />
@@ -121,19 +122,19 @@ export default function ZumbaPage() {
 
                 {/* Coaches Section */}
                 <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-white mb-8">Our Instructors</h3>
+                    <h3 className="text-3xl font-bold text-gray-800 mb-8">Our Instructors</h3>
                     <div className="max-w-3xl mx-auto">
                         <CoachesSlider coaches={coaches.zumba} />
                     </div>
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center bg-[#FF1493] rounded-xl p-12 mb-16">
+                <div className="text-center bg-[#FF1493] rounded-xl p-12 mb-16 shadow-xl">
                     <h3 className="text-3xl font-bold text-white mb-4">Ready to Dance Your Way to Fitness?</h3>
                     <p className="text-white text-lg mb-8">Join our Zumba community and experience the joy of dance fitness</p>
                     <button 
-                        onClick={() => handleTimeSlotClick("Monday", "18:30")}
-                        className="px-8 py-4 bg-white text-[#FF1493] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                        onClick={() => handleTimeSlotClick("Monday", "18:00")}
+                        className="px-8 py-4 bg-white text-[#FF1493] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                         Book Your First Class
                     </button>

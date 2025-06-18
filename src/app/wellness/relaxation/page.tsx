@@ -5,29 +5,43 @@ import {H2} from "@/components/typo/H2";
 import {Coach} from "@/types/activity";
 import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/components/activities";
 import Image from "next/image";
-import {BackButton} from "@/components/common/BackButton";
 
 const relaxationSchedule = {
     schedules: [
         {
             day: "Monday",
             timeSlots: [
-                { start: "11:00", end: "12:00", color: "#7FB3D5" },
-                { start: "15:00", end: "16:00", color: "#7FB3D5" }
+                { start: "10:00", end: "18:00", color: "#7FB3D5" }
+            ]
+        },
+        {
+            day: "Tuesday",
+            timeSlots: [
+                { start: "10:00", end: "18:00", color: "#7FB3D5" }
             ]
         },
         {
             day: "Wednesday",
             timeSlots: [
-                { start: "11:00", end: "12:00", color: "#7FB3D5" },
-                { start: "15:00", end: "16:00", color: "#7FB3D5" }
+                { start: "10:00", end: "18:00", color: "#7FB3D5" }
+            ]
+        },
+        {
+            day: "Thursday",
+            timeSlots: [
+                { start: "10:00", end: "18:00", color: "#7FB3D5" }
             ]
         },
         {
             day: "Friday",
             timeSlots: [
-                { start: "11:00", end: "12:00", color: "#7FB3D5" },
-                { start: "15:00", end: "16:00", color: "#7FB3D5" }
+                { start: "10:00", end: "18:00", color: "#7FB3D5" }
+            ]
+        },
+        {
+            day: "Saturday",
+            timeSlots: [
+                { start: "11:00", end: "16:00", color: "#7FB3D5" }
             ]
         }
     ]
@@ -36,15 +50,15 @@ const relaxationSchedule = {
 const coaches: Coach[] = [
     {
         id: "1",
-        name: "Emma Laurent",
+        name: "Emma Rousseau",
         role: "Relaxation Specialist",
         imageUrl: "/coaches/emma.jpg",
-        bio: "With a background in mindfulness and meditation, Emma guides clients through various relaxation techniques. Her gentle approach and soothing presence create a perfect environment for deep relaxation and stress relief.",
-        specialties: ["Guided Meditation", "Breathing Techniques", "Mindfulness"],
+        bio: "Emma specializes in guided relaxation and meditation techniques. With a background in mindfulness and stress management, she helps clients achieve deep relaxation and inner peace.",
+        specialties: ["Guided Meditation", "Breathing Techniques", "Stress Management"],
         certifications: [
-            "Mindfulness Meditation Teacher",
+            "Mindfulness Instructor",
             "Stress Management Specialist",
-            "Yoga Nidra Practitioner"
+            "Meditation Teacher"
         ]
     },
     {
@@ -52,43 +66,43 @@ const coaches: Coach[] = [
         name: "Thomas Moreau",
         role: "Wellness Coach",
         imageUrl: "/coaches/thomas.jpg",
-        bio: "A certified wellness coach specializing in relaxation and stress reduction techniques. Thomas combines ancient wisdom with modern approaches to help clients achieve deep relaxation and mental clarity.",
-        specialties: ["Relaxation Techniques", "Stress Reduction", "Mental Wellness"],
+        bio: "Thomas combines traditional relaxation methods with modern wellness practices. His approach focuses on creating a holistic relaxation experience that addresses both mind and body.",
+        specialties: ["Holistic Relaxation", "Wellness Coaching", "Mind-Body Connection"],
         certifications: [
             "Wellness Coach Certification",
-            "Stress Management Expert",
-            "Meditation Instructor"
+            "Holistic Health Practitioner",
+            "Relaxation Therapy Expert"
         ]
     }
 ];
 
 const features = [
     {
-        title: "Guided Sessions",
-        description: "Expert-led relaxation techniques",
-        icon: "🧘"
+        title: "Guided Meditation",
+        description: "Expert-led meditation sessions for deep relaxation",
+        icon: "🧘‍♀️"
     },
     {
-        title: "Peaceful Setting",
-        description: "Tranquil environment for deep relaxation",
+        title: "Breathing Techniques",
+        description: "Learn effective breathing methods for stress relief",
+        icon: "🫁"
+    },
+    {
+        title: "Mindfulness Practice",
+        description: "Develop present-moment awareness and focus",
         icon: "🌿"
     },
     {
-        title: "Various Methods",
-        description: "Multiple relaxation approaches",
+        title: "Stress Relief",
+        description: "Comprehensive approach to managing daily stress",
         icon: "✨"
-    },
-    {
-        title: "Personalized Care",
-        description: "Tailored to your needs",
-        icon: "💫"
     }
 ];
 
 export default function RelaxationPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [day, setDay] = useState("Monday");
-    const [time, setTime] = useState("11:00");
+    const [time, setTime] = useState("10:00 AM");
     
     const handleTimeSlotClick = (day: string, time: string) => {
         setIsModalOpen(true);
@@ -97,31 +111,31 @@ export default function RelaxationPage() {
     }
 
     return (
-        <div className="min-h-screen bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)]">
-            {/* Hero Section with Parallax Effect */}
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+            {/* Hero Section */}
             <div className="relative h-[70vh] overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
                         src="/wellness/relaxation-hero.jpg"
-                        alt="Relaxation Session"
+                        alt="Relaxation & Meditation"
                         fill
                         className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-black/30" />
                 </div>
                 <div className="relative h-full flex items-center justify-center text-center px-4">
                     <div className="max-w-4xl">
                         <div className="text-5xl md:text-6xl text-white mb-6 drop-shadow-lg">
-                            <H2>Relaxation</H2>
+                            <H2>Relaxation & Meditation</H2>
                         </div>
                         <p className="text-white text-xl md:text-2xl mt-4 max-w-2xl mx-auto leading-relaxed">
-                            Discover the art of deep relaxation through guided sessions. Our specialists will help you 
-                            find inner peace and balance through various techniques designed to reduce stress and promote well-being.
+                            Discover inner peace through our guided relaxation and meditation sessions. Our specialists will help you 
+                            achieve deep relaxation, reduce stress, and cultivate mindfulness in your daily life.
                         </p>
                         <button 
-                            onClick={() => handleTimeSlotClick("Monday", "11:00")}
-                            className="mt-8 px-8 py-4 bg-[#7FB3D5] text-white rounded-full text-lg font-semibold hover:bg-[#6EA2C4] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            onClick={() => handleTimeSlotClick("Monday", "10:00")}
+                            className="mt-8 px-8 py-4 bg-[#7FB3D5] text-white rounded-full text-lg font-semibold hover:bg-[#6ba3c5] transition-all duration-300 transform hover:scale-105 shadow-lg"
                         >
                             Start Your Journey
                         </button>
@@ -135,61 +149,59 @@ export default function RelaxationPage() {
                     {features.map((feature, index) => (
                         <div 
                             key={index}
-                            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-white transform transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                            className="bg-white/80 backdrop-blur-lg rounded-xl p-6 text-gray-800 transform transition-all duration-300 hover:scale-105 hover:bg-white/90 shadow-lg border border-gray-200"
                         >
                             <div className="text-4xl mb-4">{feature.icon}</div>
                             <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                            <p className="text-gray-200">{feature.description}</p>
+                            <p className="text-gray-600">{feature.description}</p>
                         </div>
                     ))}
                 </div>
 
                 {/* Benefits Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Benefits</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Benefits</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             "Reduces stress and anxiety",
                             "Improves sleep quality",
                             "Enhances mental clarity",
-                            "Promotes emotional balance",
-                            "Boosts overall well-being",
-                            "Increases mindfulness"
+                            "Increases emotional balance",
+                            "Boosts immune system",
+                            "Promotes overall well-being"
                         ].map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-4 bg-white/5 p-4 rounded-lg transform transition-all duration-300 hover:scale-105">
-                                <div className="w-10 h-10 bg-[#7FB3D5] rounded-full flex items-center justify-center flex-shrink-0">
+                            <div key={index} className="flex items-center gap-4 bg-blue-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 border border-blue-200">
+                                <div className="w-10 h-10 bg-[#7FB3D5] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                                     <span className="text-white font-bold">✓</span>
                                 </div>
-                                <p className="text-white">{benefit}</p>
+                                <p className="text-gray-700 font-medium">{benefit}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Schedule Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Available Sessions</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Session Times</h3>
                     <div className="flex flex-col gap-8">
                         <ActivitySchedule schedule={relaxationSchedule} />
                         <WeeklySchedule schedule={relaxationSchedule} onCLickTimeSlot={handleTimeSlotClick} />
                     </div>
                 </div>
 
-                {/* Specialists Section */}
                 <div className="mb-16">
-                    <h3 className="text-3xl font-bold text-white mb-8">Our Specialists</h3>
+                    <h3 className="text-3xl font-bold text-gray-800 mb-8">Our Relaxation Specialists</h3>
                     <div className="max-w-3xl mx-auto">
                         <CoachesSlider coaches={coaches} />
                     </div>
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center bg-[#7FB3D5] rounded-xl p-12 mb-16">
+                <div className="text-center bg-[#7FB3D5] rounded-xl p-12 mb-16 shadow-xl">
                     <h3 className="text-3xl font-bold text-white mb-4">Ready to Find Your Inner Peace?</h3>
-                    <p className="text-white text-lg mb-8">Book your relaxation session today and take the first step towards a more balanced life</p>
+                    <p className="text-white text-lg mb-8">Start your relaxation journey today and discover the power of mindfulness</p>
                     <button 
-                        onClick={() => handleTimeSlotClick("Monday", "11:00")}
-                        className="px-8 py-4 bg-white text-[#7FB3D5] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                        onClick={() => handleTimeSlotClick("Monday", "10:00")}
+                        className="px-8 py-4 bg-white text-[#7FB3D5] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                         Book Your Session
                     </button>

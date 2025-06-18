@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { useToast } from './ToastContext';
 
 interface User {
     id: string;
@@ -30,6 +31,7 @@ const mockUser: User = {
 
 export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User | null>(null);
+    const { showToast } = useToast();
 
     const login = async (email: string, password: string): Promise<boolean> => {
         // Simulation d'une requête d'authentification
@@ -46,6 +48,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const logout = () => {
         setUser(null);
+        showToast({
+            type: "info",
+            title: "Logged Out",
+            message: "You have been successfully logged out.",
+            duration: 3000
+        });
     };
 
     return (

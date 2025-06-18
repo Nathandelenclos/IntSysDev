@@ -30,7 +30,7 @@ const wellnessServices = [
 
 export default function WellnessPage() {
     return (
-        <div className="min-h-screen bg-[linear-gradient(180deg,_#03080B_0%,_#012E4A_100%)]">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
             {/* Hero Section */}
             <div className="relative h-[70vh] overflow-hidden">
                 <div className="absolute inset-0">
@@ -41,7 +41,7 @@ export default function WellnessPage() {
                         className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-black/30" />
                 </div>
                 <div className="relative h-full flex items-center justify-center text-center px-4">
                     <div className="max-w-4xl">
@@ -65,19 +65,19 @@ export default function WellnessPage() {
                             key={index}
                             className="group"
                         >
-                            <div className="relative h-[400px] rounded-xl overflow-hidden">
+                            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                                 <Image
                                     src={service.image}
                                     alt={service.title}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
                                 <div className="absolute bottom-0 left-0 right-0 p-6">
                                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                                    <p className="text-gray-200 mb-4">{service.description}</p>
+                                    <p className="text-gray-100 mb-4">{service.description}</p>
                                     <div 
-                                        className="inline-block px-6 py-2 rounded-full text-white font-semibold transition-all duration-300"
+                                        className="inline-block px-6 py-2 rounded-full text-white font-semibold transition-all duration-300 shadow-lg"
                                         style={{ backgroundColor: service.color }}
                                     >
                                         Discover More
@@ -89,8 +89,8 @@ export default function WellnessPage() {
                 </div>
 
                 {/* Benefits Section */}
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-16">
-                    <h3 className="text-3xl font-bold mb-8 text-white">Why Choose Our Wellness Center?</h3>
+                <div className="bg-white/80 backdrop-blur-lg rounded-xl p-8 mb-16 shadow-lg border border-gray-200">
+                    <h3 className="text-3xl font-bold mb-8 text-gray-800">Why Choose Our Wellness Center?</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             "Expert practitioners",
@@ -100,23 +100,23 @@ export default function WellnessPage() {
                             "Flexible scheduling",
                             "Premium quality service"
                         ].map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-4 bg-white/5 p-4 rounded-lg transform transition-all duration-300 hover:scale-105">
-                                <div className="w-10 h-10 bg-[#7FB3D5] rounded-full flex items-center justify-center flex-shrink-0">
+                            <div key={index} className="flex items-center gap-4 bg-purple-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-purple-100 border border-purple-200">
+                                <div className="w-10 h-10 bg-[#7FB3D5] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                                     <span className="text-white font-bold">✓</span>
                                 </div>
-                                <p className="text-white">{benefit}</p>
+                                <p className="text-gray-700 font-medium">{benefit}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center bg-gradient-to-r from-[#FF6B6B] via-[#9B6B9E] to-[#7FB3D5] rounded-xl p-12 mb-16">
+                <div className="text-center bg-gradient-to-r from-[#FF6B6B] via-[#9B6B9E] to-[#7FB3D5] rounded-xl p-12 mb-16 shadow-xl">
                     <h3 className="text-3xl font-bold text-white mb-4">Start Your Wellness Journey Today</h3>
                     <p className="text-white text-lg mb-8">Choose from our range of wellness services and take the first step towards a healthier, more balanced life</p>
                     <Link 
                         href="/wellness/sauna"
-                        className="inline-block px-8 py-4 bg-white text-[#012E4A] rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                        className="inline-block px-8 py-4 bg-white text-gray-800 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                     >
                         Explore Our Services
                     </Link>

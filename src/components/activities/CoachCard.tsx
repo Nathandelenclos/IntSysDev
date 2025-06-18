@@ -1,8 +1,8 @@
 "use client";
 
-import { Coach } from "@/types/activity";
+import {Coach} from "@/types/activity";
 import Image from "next/image";
-import { useState } from "react";
+import {useState} from "react";
 
 interface CoachCardProps {
     coach: Coach;
@@ -14,12 +14,12 @@ export function CoachCard({ coach, color = "#FFD600" }: CoachCardProps) {
 
     return (
         <div 
-            className="relative bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl"
+            className="relative bg-white/90 backdrop-blur-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-200"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Image Container */}
-            <div className="relative h-[300px] w-full">
+            <div className="relative h-[300px] w-full overflow-hidden">
                 <Image
                     src={coach.imageUrl}
                     alt={coach.name}
@@ -27,34 +27,34 @@ export function CoachCard({ coach, color = "#FFD600" }: CoachCardProps) {
                     className="object-cover transition-transform duration-500"
                     style={{ transform: isHovered ? 'scale(1.1)' : 'scale(1)' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             </div>
 
             {/* Content */}
             <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                     <div>
-                        <h3 className="text-2xl font-bold text-white mb-1">{coach.name}</h3>
-                        <p className="text-gray-300">{coach.role}</p>
+                        <h3 className="text-2xl font-bold text-gray-800 mb-1">{coach.name}</h3>
+                        <p className="text-gray-600">{coach.role}</p>
                     </div>
                     <div 
-                        className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                        className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md"
                         style={{ backgroundColor: color }}
                     >
                         <span className="text-white text-xl">👋</span>
                     </div>
                 </div>
 
-                <p className="text-gray-200 mb-6 line-clamp-3">{coach.bio}</p>
+                <p className="text-gray-700 mb-6 line-clamp-3">{coach.bio}</p>
 
                 {/* Specialties */}
                 <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Specialties</h4>
+                    <h4 className="text-gray-800 font-semibold mb-3">Specialties</h4>
                     <div className="flex flex-wrap gap-2">
                         {coach.specialties.map((specialty, index) => (
                             <span 
                                 key={index}
-                                className="px-3 py-1 rounded-full text-sm"
+                                className="px-3 py-1 rounded-full text-sm font-medium"
                                 style={{ 
                                     backgroundColor: `${color}20`,
                                     color: color
@@ -68,10 +68,10 @@ export function CoachCard({ coach, color = "#FFD600" }: CoachCardProps) {
 
                 {/* Certifications */}
                 <div>
-                    <h4 className="text-white font-semibold mb-3">Certifications</h4>
+                    <h4 className="text-gray-800 font-semibold mb-3">Certifications</h4>
                     <ul className="space-y-2">
                         {coach.certifications.map((certification, index) => (
-                            <li key={index} className="flex items-center gap-2 text-gray-300">
+                            <li key={index} className="flex items-center gap-2 text-gray-600">
                                 <div 
                                     className="w-2 h-2 rounded-full flex-shrink-0"
                                     style={{ backgroundColor: color }}
@@ -85,7 +85,7 @@ export function CoachCard({ coach, color = "#FFD600" }: CoachCardProps) {
 
             {/* Hover Overlay */}
             <div 
-                className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300"
                 style={{ opacity: isHovered ? 1 : 0 }}
             />
         </div>

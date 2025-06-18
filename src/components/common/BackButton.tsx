@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
+import {useRouter} from 'next/navigation';
 
 export const BackButton = () => {
     const router = useRouter();
@@ -8,7 +8,7 @@ export const BackButton = () => {
     return (
         <button
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-gray-300 hover:text-[#ffd600] transition-colors"
+            className="flex items-center gap-2 text-white hover:text-[#ffd600] transition-colors"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

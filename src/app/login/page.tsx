@@ -7,12 +7,14 @@ import Link from "next/link";
 import {useAuth} from "@/contexts/AuthContext";
 import {useRouter} from "next/navigation";
 import {useState} from "react";
+import {useToast} from "@/contexts/ToastContext";
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const { login } = useAuth();
+    const { showToast } = useToast();
     const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -22,12 +24,30 @@ export default function Login() {
         try {
             const success = await login(email, password);
             if (success) {
+                showToast({
+                    type: "success",
+                    title: "Welcome back!",
+                    message: "You have been successfully logged in.",
+                    duration: 4000
+                });
                 router.push("/");
             } else {
                 setError("Invalid email or password");
+                showToast({
+                    type: "error",
+                    title: "Login Failed",
+                    message: "Invalid email or password. Please try again.",
+                    duration: 5000
+                });
             }
         } catch (err) {
             setError("An error occurred. Please try again.");
+            showToast({
+                type: "error",
+                title: "Login Error",
+                message: "An error occurred during login. Please try again.",
+                duration: 5000
+            });
         }
     };
 

@@ -28,7 +28,7 @@ export function CoachesSlider({ coaches }: CoachesSliderProps) {
             {/* Navigation Buttons */}
             <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors border border-gray-200"
                 aria-label="Previous coach"
             >
                 <svg
@@ -37,7 +37,7 @@ export function CoachesSlider({ coaches }: CoachesSliderProps) {
                     viewBox="0 0 24 24"
                     strokeWidth={2}
                     stroke="currentColor"
-                    className="w-6 h-6"
+                    className="w-6 h-6 text-gray-700"
                 >
                     <path
                         strokeLinecap="round"
@@ -49,7 +49,7 @@ export function CoachesSlider({ coaches }: CoachesSliderProps) {
 
             <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors border border-gray-200"
                 aria-label="Next coach"
             >
                 <svg
@@ -58,7 +58,7 @@ export function CoachesSlider({ coaches }: CoachesSliderProps) {
                     viewBox="0 0 24 24"
                     strokeWidth={2}
                     stroke="currentColor"
-                    className="w-6 h-6"
+                    className="w-6 h-6 text-gray-700"
                 >
                     <path
                         strokeLinecap="round"
@@ -93,7 +93,7 @@ export function CoachesSlider({ coaches }: CoachesSliderProps) {
                         onClick={() => setCurrentIndex(index)}
                         className={`w-2 h-2 rounded-full transition-colors ${
                             index === currentIndex
-                                ? "bg-[#FFD600]"
+                                ? "bg-blue-600"
                                 : "bg-gray-300 hover:bg-gray-400"
                         }`}
                         aria-label={`Go to slide ${index + 1}`}

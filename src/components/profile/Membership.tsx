@@ -4,6 +4,7 @@ import {H3} from "@/components/typo/H3";
 import {useAuth} from "@/contexts/AuthContext";
 import {Card} from "@/components/ui/Card";
 import {Badge} from "@/components/ui/Badge";
+import {useToast} from "@/contexts/ToastContext";
 
 interface Benefit {
     name: string;
@@ -38,10 +39,20 @@ const membershipBenefits: Record<string, Benefit[]> = {
 
 export function Membership() {
     const { user } = useAuth();
+    const { showToast } = useToast();
 
     if (!user) return null;
 
     const benefits = membershipBenefits[user.membership] || membershipBenefits["Basic"];
+
+    const handleUpgradeMembership = () => {
+        showToast({
+            type: "info",
+            title: "Upgrade Membership",
+            message: "Redirecting to membership upgrade page...",
+            duration: 4000
+        });
+    };
 
     return (
         <Card>
@@ -88,7 +99,10 @@ export function Membership() {
                     </div>
 
                     <div className="pt-4 border-t border-[#0A4D68]">
-                        <button className="w-full bg-[#0A4D68] hover:bg-[#0A4D68]/80 text-white py-2 px-4 rounded-lg transition-colors">
+                        <button 
+                            onClick={handleUpgradeMembership}
+                            className="w-full bg-[#0A4D68] hover:bg-[#0A4D68]/80 text-white py-2 px-4 rounded-lg transition-colors"
+                        >
                             Upgrade Membership
                         </button>
                     </div>

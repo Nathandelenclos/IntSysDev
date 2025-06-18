@@ -1,196 +1,279 @@
 {
   "articles": [
     {
-      "slug": "benefits-of-fitness",
+      "slug": "benefits-of-fitness-body-mind",
       "title": "The Benefits of Fitness for Body and Mind",
-      "description": "Discover how regular physical activity enhances both physical and mental well-being.",
-      "content": "In today\u2019s fast-paced world, physical exercise has become more than just a way to stay in shape \u2014 it\u2019s a vital tool for maintaining mental balance and overall well-being. At Fitness Park, we believe in promoting a healthy lifestyle that nurtures both the body and the mind.\n<br/><br/>\n<strong>1. Improved Physical Health:</strong> Exercise strengthens the cardiovascular system, enhances muscle tone, improves flexibility, and helps maintain a healthy weight. It also reduces the risk of chronic illnesses.\n<br/><br/>\n<strong>2. Boosted Mental Health:</strong> Physical activity stimulates endorphins, reduces stress and anxiety, and improves sleep and cognitive function.\n<br/><br/>\n<strong>3. Increased Energy Levels:</strong> Contrary to what many think, working out boosts stamina and reduces fatigue.\n<br/><br/>\n<strong>4. Greater Self-Confidence:</strong> Achieving fitness goals enhances self-image and resilience.\n<br/><br/>\n<strong>5. Social and Emotional Benefits:</strong> Group classes and shared sessions foster motivation and emotional support.",
-      "author": "@FitnessPark",
+      "description": "Explore the full range of physical, mental, and emotional benefits that fitness can offer.",
+      "content": "In today’s fast-paced world, physical exercise has become more than just a way to stay in shape — it’s a vital tool for maintaining mental balance and overall well-being. At Fitness Center, we believe in promoting a healthy lifestyle that nurtures both the body and the mind. But what exactly are the key benefits of regular fitness?</br></br><strong>1. Improved Physical Health</strong><br/>Exercise strengthens the cardiovascular system, enhances muscle tone, improves flexibility, and helps maintain a healthy weight. Regular physical activity is also known to reduce the risk of chronic illnesses such as diabetes, hypertension, and certain cancers.</br></br><strong>2. Boosted Mental Health</strong><br/>Physical activity stimulates the production of endorphins — the body’s natural mood boosters. It reduces stress, anxiety, and symptoms of depression, while improving sleep and cognitive function. Even a short workout can have a noticeable effect on your mood and mental clarity.</br></br><strong>3. Increased Energy Levels</strong><br/>Contrary to what many think, working out doesn’t drain your energy — it recharges it. A consistent fitness routine enhances stamina and reduces fatigue by improving oxygen flow and the efficiency of your cardiovascular system.</br></br><strong>4. Greater Self-Confidence</strong><br/>As your body becomes stronger and more resilient, your confidence grows. Setting and achieving fitness goals gives a sense of accomplishment and helps build a positive self-image.</br></br><strong>5. Social and Emotional Benefits</strong><br/>Whether through group classes like Zumba or personal training sessions, being part of a fitness community fosters motivation, social interaction, and emotional support.</br></br>At Fitness Center, we provide the ideal environment to experience all these benefits. From modern equipment and expert coaches to wellness spaces and personalized programs — everything is designed to help you feel your best.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Well-being",
-      "tags": [
-        "fitness",
-        "mental health",
-        "exercise"
-      ],
-      "imageUrl": "/images/article1.jpg",
-      "comments": []
-    },
-    {
+      "tags": ["fitness", "mental health", "wellness", "confidence", "energy"],
+      "imageUrl": "/images/article-benefits.jpg",
+      "comments": [
+        {
+          "author": "Emma",
+          "date": "2024-06-17",
+          "content": "Really inspiring article! It's a great reminder to keep moving."
+        },
+        {
+          "author": "Jake",
+          "date": "2024-06-18",
+          "content": "Love how this covers both the mental and physical aspects of fitness."
+        }
+      ]
+    },{
       "slug": "choose-your-fitness-program",
       "title": "Which Fitness Program Should You Choose Based on Your Goals?",
-      "description": "Find the right training routine for your personal fitness goals.",
-      "content": "At Fitness Park, every fitness journey is unique. Whether your goal is weight loss, muscle gain, flexibility, or stress relief, we have tailored programs:\n<br/><br/>\n<strong>Weight Loss:</strong> Try Zumba, CrossFit, or Cardio Training for high-intensity results.\n<br/><br/>\n<strong>Muscle Gain:</strong> Choose CrossFit, Personal Coaching, or Strength Training to build mass and power.\n<br/><br/>\n<strong>Flexibility & Posture:</strong> Pilates and Stretching Classes improve alignment and core strength.\n<br/><br/>\n<strong>Stress Relief:</strong> Yoga, Light Cardio, and Sauna provide mental relaxation and tension release.\n<br/><br/>\n<strong>Getting Back in Shape:</strong> Begin gently with our beginner group classes or personal coaching.",
-      "author": "@FitnessPark",
+      "description": "Match your personal fitness goals with the right training programs at Fitness Center.",
+      "content": "At Fitness Center, we know that every fitness journey is unique. Whether you're aiming to lose weight, build muscle, gain flexibility, or simply feel better in your body, choosing the right program is essential to achieving your goals effectively and safely. So, how do you decide?</br></br><strong>1. Goal: Weight Loss</strong><br/>Recommended Programs: Zumba, CrossFit, Cardio Training<br/>If burning calories is your priority, go for high-intensity, full-body workouts. Zumba offers fun and dynamic movements that keep your heart rate up, while CrossFit mixes strength and cardio for fast results.</br></br><strong>2. Goal: Muscle Gain & Strength</strong><br/>Recommended Programs: CrossFit, Personal Coaching, Strength Training<br/>Building muscle requires resistance exercises and structured progression. Our coaches help create custom programs with weights, machines, and CrossFit-based routines tailored to your fitness level.</br></br><strong>3. Goal: Improved Flexibility & Posture</strong><br/>Recommended Programs: Pilates, Stretching Classes<br/>Pilates focuses on core stability, flexibility, and alignment — ideal for those who spend long hours sitting or want to relieve muscle tension. These low-impact exercises strengthen without strain.</br></br><strong>4. Goal: Stress Relief & Relaxation</strong><br/>Recommended Programs: Yoga, Sauna & Wellness Zone, Light Cardio<br/>Combining gentle movement with breathing, yoga helps reduce mental fatigue. After your session, enjoy our massage area or sauna to fully unwind.</br></br><strong>5. Goal: Getting Back in Shape After a Break</strong><br/>Recommended Programs: Personalized Coaching, Group Classes for Beginners<br/>If you're restarting your fitness routine, our coaches can help you ease back into regular activity with low-pressure, motivating programs.</br></br>Whatever your objective is, our team at Fitness Center is here to support and guide you. With modern facilities, expert trainers, and a wide variety of disciplines, you'll find a program that not only fits your goals — but also your lifestyle.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Programs",
-      "tags": [
-        "fitness goals",
-        "personalized",
-        "training"
-      ],
-      "imageUrl": "/images/article2.jpg",
-      "comments": []
+      "tags": ["fitness goals", "training", "custom plans", "coaching"],
+      "imageUrl": "/images/article-choose-program.jpg",
+      "comments": [
+        {
+          "author": "Claire",
+          "date": "2024-06-17",
+          "content": "Really useful breakdown! Helped me choose my first class."
+        },
+        {
+          "author": "David",
+          "date": "2024-06-18",
+          "content": "I love how each goal is matched with clear options. Well done!"
+        }
+      ]
     },
     {
       "slug": "crossfit-discipline",
       "title": "CrossFit: A Complete Discipline to Push Your Limits",
-      "description": "Challenge your body and mind with high-intensity CrossFit workouts.",
-      "content": "CrossFit combines weightlifting, cardio, and functional movements to push your physical and mental limits. Every session (WOD \u2013 Workout of the Day) is different and scalable for all levels.\n<br/><br/>\n<strong>Why Choose CrossFit?</strong>\n<ul>\n<li>\u2705 Total-Body Workout</li>\n<li>\u2705 Scalable for All Levels</li>\n<li>\u2705 Fast Results</li>\n<li>\u2705 Strong Community</li>\n<li>\u2705 Mental Toughness</li>\n</ul>\nOur dedicated coaches at Fitness Park will ensure proper technique and adaptation for every member.",
-      "author": "@FitnessPark",
+      "description": "Discover how CrossFit challenges your body and mind with high-intensity, scalable workouts.",
+      "content": "Looking for a workout that challenges your body and mind? CrossFit might be exactly what you need. At Fitness Center, our CrossFit sessions are designed to help you build strength, endurance, and confidence — all while being part of a motivating and energetic community.</br></br><strong>What is CrossFit?</strong><br/>CrossFit is a high-intensity training method that combines weightlifting, cardio, and functional movements like squats, push-ups, and box jumps. The sessions vary daily (called WODs – Workouts of the Day), keeping the routine fresh and the body constantly challenged.</br></br><strong>Why Choose CrossFit?</strong><br/></br>✅ <strong>Total-Body Workout:</strong> Every session targets multiple muscle groups, improving strength, speed, and coordination.<br/></br>✅ <strong>Scalable for All Levels:</strong> Whether you're a beginner or an experienced athlete, the workouts can be adjusted to match your level and progress.<br/></br>✅ <strong>Fast Results:</strong> Thanks to its intensity, CrossFit burns calories quickly and improves both cardiovascular and muscular fitness.<br/></br>✅ <strong>Strong Community:</strong> Train with others who push and support each other — the CrossFit community spirit is like no other.<br/></br>✅ <strong>Mental Toughness:</strong> Overcoming each WOD builds not only physical strength but also mental resilience.</br></br><strong>CrossFit at Fitness Center</strong><br/>Our dedicated CrossFit coaches will guide you through proper techniques, ensure safety, and adapt exercises to your needs. Whether your goal is fat loss, muscle gain, or simply becoming the best version of yourself, CrossFit offers the tools and structure to get there.</br></br>Are you ready to break your limits and transform your fitness routine? Join a CrossFit class at Fitness Center and experience the difference today.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "CrossFit",
-      "tags": [
-        "crossfit",
-        "training",
-        "strength"
-      ],
-      "imageUrl": "/images/article3.jpg",
-      "comments": []
+      "tags": ["crossfit", "high-intensity", "community", "strength", "WOD"],
+      "imageUrl": "/images/article-crossfit.jpg",
+      "comments": [
+        {
+          "author": "Isabel",
+          "date": "2024-06-17",
+          "content": "CrossFit has completely changed the way I train — thank you Fitness Center!"
+        },
+        {
+          "author": "Frank",
+          "date": "2024-06-18",
+          "content": "This article motivated me to finally try a session. Let’s go!"
+        }
+      ]
     },
     {
       "slug": "pilates-fitness",
       "title": "Pilates: Strengthen Your Body Gently and Effectively",
-      "description": "A mindful approach to fitness that enhances posture, core strength, and flexibility.",
-      "content": "Pilates focuses on controlled movements, breathing, and alignment \u2014 ideal for core and posture.\n<br/><br/>\n<strong>Key Benefits:</strong>\n<ul>\n<li>\u2705 Core Strength</li>\n<li>\u2705 Better Posture</li>\n<li>\u2705 Injury Prevention</li>\n<li>\u2705 Increased Flexibility</li>\n<li>\u2705 Stress Reduction</li>\n</ul>\nPerfect for all levels \u2014 from beginners to athletes and post-injury recovery.",
-      "author": "@FitnessPark",
+      "description": "Improve posture, core strength, and flexibility with gentle yet powerful Pilates sessions.",
+      "content": "In a world where high-impact workouts dominate the fitness scene, Pilates stands out as a low-impact yet highly effective discipline that strengthens the body from the inside out. At Fitness Center, we offer Pilates classes designed to improve posture, core strength, and overall body awareness — without the stress on joints.</br></br><strong>What is Pilates?</strong><br/>Pilates is a method of exercise that focuses on controlled movements, breathing, and alignment. It targets deep muscles, especially in the abdomen, back, and pelvic floor, which are essential for good posture and balance.</br></br><strong>Key Benefits of Pilates</strong><br/></br>✅ <strong>Improved Core Strength:</strong> Pilates activates deep stabilizing muscles, helping you build a strong and supportive core.<br/></br>✅ <strong>Better Posture & Alignment:</strong> It corrects muscular imbalances and teaches you how to move efficiently in daily life.<br/></br>✅ <strong>Injury Prevention & Rehabilitation:</strong> Ideal for those recovering from injury or dealing with back pain — it's gentle, precise, and safe.<br/></br>✅ <strong>Increased Flexibility:</strong> Through a series of slow, flowing movements, Pilates enhances your mobility without straining your body.<br/></br>✅ <strong>Stress Reduction:</strong> The focus on breathing and body control helps calm the mind and reduce tension.</br></br><strong>Who Is It For?</strong><br/>Pilates is for everyone — from beginners to athletes, from office workers with back pain to seniors seeking improved mobility. At Fitness Center, our instructors will guide you through exercises that match your level and progress.</br></br>Whether you're looking to tone your body, relieve pain, or simply move better, Pilates offers a powerful, mindful approach to fitness.<br/><br/>Join a Pilates class at Fitness Center and feel the difference — from your posture to your peace of mind.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Pilates",
-      "tags": [
-        "pilates",
-        "core",
-        "flexibility"
-      ],
-      "imageUrl": "/images/article4.jpg",
-      "comments": []
+      "tags": ["pilates", "core strength", "posture", "rehabilitation", "flexibility"],
+      "imageUrl": "/images/article-pilates.jpg",
+      "comments": [
+        {
+          "author": "Alice",
+          "date": "2024-06-17",
+          "content": "Pilates changed how I manage my back pain — love these sessions!"
+        },
+        {
+          "author": "Hugo",
+          "date": "2024-06-18",
+          "content": "Great explanation of what Pilates really brings to the table. Thanks!"
+        }
+      ]
     },
     {
       "slug": "zumba-joy",
       "title": "Zumba: Dance, Sweat, and Burn Calories with Joy",
-      "description": "A fun and energetic workout inspired by Latin rhythms.",
-      "content": "Zumba mixes salsa, reggaeton, merengue, and hip-hop in a cardio workout that doesn\u2019t feel like work.\n<br/><br/>\n<strong>Why Zumba?</strong>\n<ul>\n<li>\u2705 Fun and Energetic</li>\n<li>\u2705 High Calorie Burn</li>\n<li>\u2705 Full-Body Workout</li>\n<li>\u2705 Stress Relief</li>\n<li>\u2705 Great for All Levels</li>\n</ul>\nJoin a Zumba class and let music move you.",
-      "author": "@FitnessPark",
+      "description": "Burn calories while having fun with energetic Zumba sessions at Fitness Center.",
+      "content": "If you're looking for a workout that feels more like a party than a routine, Zumba is the perfect choice. At Fitness Center, our Zumba classes bring together Latin rhythms, dynamic moves, and an uplifting atmosphere — making it easy to burn calories while having fun.</br></br><strong>What is Zumba?</strong><br/>Zumba is a dance-based cardio workout inspired by Latin and international music styles such as salsa, reggaeton, merengue, and hip-hop. Each session combines fast and slow rhythms to create a dynamic fitness program that improves cardiovascular health and tones your entire body.</br></br><strong>Why Zumba is So Popular</strong><br/></br>✅ <strong>Fun and Energetic:</strong> You don’t need to be a dancer — just follow the music and enjoy the energy of the group.<br/></br>✅ <strong>High Calorie Burn:</strong> You can burn 500–800 calories per session, making it a great option for weight loss.<br/></br>✅ <strong>Full-Body Workout:</strong> Zumba targets multiple muscle groups, including legs, arms, core, and glutes.<br/></br>✅ <strong>Stress Relief:</strong> Moving to music releases endorphins, reduces anxiety, and boosts your mood.<br/></br>✅ <strong>Great for All Levels:</strong> From beginners to advanced dancers, everyone can enjoy and follow at their own pace.</br></br><strong>Zumba at Fitness Center</strong><br/>Our certified Zumba instructors bring high energy and motivation to every class. Whether you want to improve your fitness, socialize, or simply shake off the stress of the day — Zumba offers a joyful and powerful way to stay in shape.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Zumba",
-      "tags": [
-        "zumba",
-        "dance",
-        "fun"
-      ],
-      "imageUrl": "/images/article5.jpg",
-      "comments": []
+      "tags": ["zumba", "dance", "cardio", "weight loss", "fun"],
+      "imageUrl": "/images/article-zumba.jpg",
+      "comments": [
+        {
+          "author": "Grace",
+          "date": "2024-06-17",
+          "content": "Zumba is the highlight of my week — the energy is amazing!"
+        },
+        {
+          "author": "Bob",
+          "date": "2024-06-18",
+          "content": "Didn’t expect to sweat that much! Super fun and effective workout."
+        }
+      ]
     },
     {
-      "slug": "fitness-for-moms",
+      "slug": "fitness-for-new-moms",
       "title": "Fitness for New Moms: Regain Strength and Confidence After Pregnancy",
-      "description": "Tailored sessions to support recovery and energy for new moms.",
-      "content": "Motherhood changes everything \u2014 including your body. Fitness Park offers postnatal programs to:\n<br/><br/>\n<ul>\n<li>\u2705 Rebuild Core Strength</li>\n<li>\u2705 Improve Posture</li>\n<li>\u2705 Boost Energy</li>\n<li>\u2705 Reduce Stress</li>\n<li>\u2705 Regain Confidence</li>\n</ul>\nWith kid-friendly zones and expert coaching, take care of yourself \u2014 and your family.",
-      "author": "@FitnessPark",
+      "description": "Rebuild strength and energy with safe, supportive postnatal fitness programs at Fitness Center.",
+      "content": "Motherhood is a beautiful journey — but it also brings major changes to the body and lifestyle. At Fitness Center, we understand the unique needs of new moms, and we offer specialized fitness sessions that help you rebuild strength, boost energy, and take care of yourself — all in a supportive and family-friendly environment.</br></br><strong>Why Postnatal Fitness Matters</strong><br/>After giving birth, many women want to feel strong and energized again — but returning to exercise needs to be done gently and mindfully. Our programs are designed to focus on:<br/></br>✅ <strong>Core Recovery:</strong> Rebuilding abdominal strength and pelvic floor function safely.<br/></br>✅ <strong>Posture & Mobility:</strong> Relieving tension from carrying the baby and improving body alignment.<br/></br>✅ <strong>Energy Boost:</strong> Fighting fatigue through gentle cardio and endorphin release.<br/></br>✅ <strong>Mental Well-Being:</strong> Reducing stress, anxiety, and postpartum blues through movement.<br/></br>✅ <strong>Body Confidence:</strong> Helping you reconnect with your body at your own pace.</br></br><strong>Tailored Sessions for Moms</strong><br/>We offer both group classes and personalized coaching adapted to your fitness level and postpartum stage. Whether you had a natural birth or C-section, our expert coaches ensure your workouts are safe and effective.</br></br><strong>A Family-Friendly Fitness Experience</strong><br/>Fitness Center makes it easier for moms to take care of themselves. With our play area for kids, you can focus on your workout while your child is in a fun and secure space — just a few steps away.</br></br>Because taking care of yourself is also part of taking care of your family — we’re here to support your journey back to strength and confidence.<br/><br/>Join our mom-friendly fitness sessions at Fitness Center today.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Mom & Baby",
-      "tags": [
-        "postnatal",
-        "mothers",
-        "wellness"
-      ],
-      "imageUrl": "/images/article6.jpg",
-      "comments": []
+      "tags": ["postnatal", "mothers", "wellness", "recovery", "energy"],
+      "imageUrl": "/images/article-new-moms.jpg",
+      "comments": [
+        {
+          "author": "Emma",
+          "date": "2024-06-17",
+          "content": "As a new mom, I really appreciate this supportive approach — thank you!"
+        },
+        {
+          "author": "Jake",
+          "date": "2024-06-18",
+          "content": "My partner is following the program and loves it. Great initiative!"
+        }
+      ]
     },
     {
       "slug": "importance-of-recovery",
       "title": "The Importance of Recovery After Exercise: Relax, Rebuild, Repeat",
-      "description": "Understand why rest is a key component of progress.",
-      "content": "Recovery is vital. It supports:\n<br/><br/>\n<ul>\n<li>\u2705 Muscle Repair</li>\n<li>\u2705 Injury Prevention</li>\n<li>\u2705 Improved Performance</li>\n<li>\u2705 Mental Recharge</li>\n<li>\u2705 Better Sleep</li>\n</ul>\nAt Fitness Park, enjoy saunas, massages, stretching zones, and healthy drinks to recover right.",
-      "author": "@FitnessPark",
+      "description": "Learn why recovery is essential for muscle growth, injury prevention, and long-term fitness success.",
+      "content": "Training hard is only one part of the fitness equation — recovery is just as essential. At Fitness Center, we believe that rest and recovery are not optional, but vital steps in achieving long-term results and avoiding injuries. That’s why we offer a range of recovery-focused amenities, from saunas to massages, to help you recharge and get back stronger.</br></br><strong>Why Recovery Matters</strong><br/></br>✅ <strong>Muscle Repair and Growth:</strong> After intense training, your muscles need time to rebuild. Rest allows the fibers to grow stronger.<br/></br>✅ <strong>Injury Prevention:</strong> Overtraining increases the risk of strains, fatigue, and burnout. Proper recovery helps avoid setbacks.<br/></br>✅ <strong>Improved Performance:</strong> Giving your body time to recover boosts your next workout’s quality and effectiveness.<br/></br>✅ <strong>Mental Recharge:</strong> Recovery helps reduce stress, restore energy, and keep motivation high.<br/></br>✅ <strong>Better Sleep:</strong> Physical recovery promotes deeper, more restorative sleep, which is essential for overall well-being.</br></br><strong>Recovery Tools at Fitness Center</strong><br/>At Fitness Center, we go beyond training by offering recovery options to optimize your progress:<br/></br><strong>Sauna & Relaxation Area:</strong> Sweat out toxins, loosen muscles, and enjoy mental clarity.<br/></br><strong>Massage Services:</strong> Targeted muscle relief to ease soreness and speed up healing.<br/></br><strong>Stretching Zones:</strong> Dedicated spaces to work on flexibility and cool down properly.<br/></br><strong>Hydration & Smoothie Bar:</strong> Replenish nutrients with our healthy post-workout drinks.</br></br><strong>Balance is Key</strong><br/>Training without recovery is like running on empty. Whether you’re a beginner or a seasoned athlete, listening to your body and incorporating rest into your routine will lead to better results, faster progress, and fewer injuries.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Recovery",
-      "tags": [
-        "recovery",
-        "rest",
-        "regeneration"
-      ],
-      "imageUrl": "/images/article7.jpg",
-      "comments": []
+      "tags": ["recovery", "rest", "performance", "well-being", "muscle repair"],
+      "imageUrl": "/images/article-recovery.jpg",
+      "comments": [
+        {
+          "author": "Claire",
+          "date": "2024-06-17",
+          "content": "This made me realize how little I was focusing on recovery. Great read!"
+        },
+        {
+          "author": "David",
+          "date": "2024-06-18",
+          "content": "Love that you offer saunas and massage services. It’s a game-changer."
+        }
+      ]
     },
     {
       "slug": "nutrition-performance",
       "title": "Fuel Your Workout: Nutrition Tips to Boost Your Performance",
-      "description": "Essential nutrition tips to power and recover from workouts.",
-      "content": "Exercise needs fuel. Optimize your results with smart pre/post workout choices:\n<br/><br/>\n<strong>Before Workout:</strong> Carbs + Protein + Hydration\n<br/><br/>\n<strong>After Workout:</strong> Water + Lean Protein + Healthy Carbs\n<br/><br/>\nOur smoothie bar offers delicious blends to keep you nourished and ready.",
-      "author": "@FitnessPark",
+      "description": "Maximize your fitness results with smart pre- and post-workout nutrition tips from Fitness Center.",
+      "content": "Exercise and nutrition go hand in hand. To get the most out of your workouts, you need to fuel your body properly before and after each session. At Fitness Center, we not only provide state-of-the-art equipment and coaching, but also help you make smarter food choices through our healthy corner with smoothies and shakes — designed to complement your training goals.</br></br><strong>Why Nutrition Matters for Fitness</strong><br/></br>✅ <strong>Energy and Endurance:</strong> The right foods fuel your muscles and help maintain stamina during workouts.<br/></br>✅ <strong>Muscle Recovery:</strong> Protein and essential nutrients are crucial for rebuilding muscle after training.<br/></br>✅ <strong>Fat Burn and Metabolism:</strong> Balanced meals can help optimize fat burning and prevent energy crashes.<br/></br>✅ <strong>Hydration and Focus:</strong> Staying hydrated keeps your body and brain functioning at their best.<br/></br>✅ <strong>Injury Prevention:</strong> Proper nutrition supports bone health and reduces inflammation.</br></br><strong>Before Your Workout: Fuel Up</strong><br/>Eat a light, balanced meal 1–2 hours before training. Focus on:<br/></br>- Complex carbs (like oats or whole grains) for steady energy<br/></br>- Moderate protein (such as Greek yogurt or a protein shake)<br/></br>- Hydration — drink water throughout the day</br></br><strong>After Your Workout: Recover Smart</strong><br/>Within 30–60 minutes after exercising, aim to:<br/></br>- Rehydrate with water or electrolyte-rich drinks<br/></br>- Rebuild with lean protein (chicken, tofu, eggs)<br/></br>- Refuel with healthy carbs (fruit, rice, quinoa)</br></br>You can also stop by our smoothie bar, where we offer delicious blends packed with protein, vitamins, and superfoods — perfect for your post-workout recovery.</br></br><strong>Eat well. Train better. Recover faster.</strong><br/>With the right fuel and guidance, your fitness goals are more attainable than ever.<br/><br/>Discover the nutrition support available at Fitness Center — your body will thank you.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Nutrition",
-      "tags": [
-        "nutrition",
-        "hydration",
-        "energy"
-      ],
-      "imageUrl": "/images/article8.jpg",
-      "comments": []
+      "tags": ["nutrition", "workout", "hydration", "recovery", "smoothies"],
+      "imageUrl": "/images/article-nutrition.jpg",
+      "comments": [
+        {
+          "author": "Frank",
+          "date": "2024-06-17",
+          "content": "Super helpful! I didn’t realize how important nutrition timing was."
+        },
+        {
+          "author": "Grace",
+          "date": "2024-06-18",
+          "content": "I love the smoothie bar after my workout. Great tips here!"
+        }
+      ]
     },
     {
       "slug": "personal-coaching",
       "title": "Personal Coaching: A Tailored Path to Your Fitness Goals",
-      "description": "Reach your fitness potential with 1-on-1 coaching.",
-      "content": "No two fitness paths are the same. Personal coaching gives:\n<br/><br/>\n<ul>\n<li>\u2705 Custom Plans</li>\n<li>\u2705 Guidance and Motivation</li>\n<li>\u2705 Faster Results</li>\n<li>\u2705 Progress Tracking</li>\n<li>\u2705 Flexible Scheduling</li>\n</ul>\nFrom beginner to athlete, coaching adapts to your needs.",
-      "author": "@FitnessPark",
+      "description": "Achieve your fitness goals faster with customized coaching programs designed just for you.",
+      "content": "No two bodies are the same — and neither are their fitness journeys. That’s why at Fitness Center, we offer personal coaching programs tailored specifically to your goals, abilities, and lifestyle. Whether you’re a beginner, looking to break through a plateau, or training for a specific event, our expert coaches will build a plan just for you.</br></br><strong>Why Choose Personal Coaching?</strong><br/></br>✅ <strong>Custom Plan for Your Needs:</strong> Whether your focus is fat loss, muscle gain, endurance, or recovery, your coach will build a roadmap adapted to your personal goals.<br/></br>✅ <strong>Guidance and Motivation:</strong> Coaches provide constant support, ensuring correct form, keeping you accountable, and pushing you when needed.<br/></br>✅ <strong>Faster, Safer Progress:</strong> With expert supervision, you avoid injuries and make progress efficiently.<br/></br>✅ <strong>Tracking and Adjustments:</strong> Regular assessments allow us to adjust your plan based on your progress and feedback.<br/></br>✅ <strong>Flexible Scheduling:</strong> Train on your own time, at your own pace — without losing structure or results.</br></br><strong>How It Works at Fitness Center</strong><br/></br><strong>Initial Assessment:</strong> Define your goals, fitness level, and any special needs or preferences.<br/></br><strong>Customized Plan:</strong> Your coach creates a detailed program (strength, cardio, nutrition advice, recovery) just for you.<br/></br><strong>1-on-1 Sessions:</strong> Train with your coach in a focused and private setting.<br/></br><strong>Progress Tracking:</strong> Monitor improvements and adapt the plan regularly.<br/></br><strong>Ongoing Support:</strong> Even outside of sessions, your coach is here to guide and motivate you.</br></br><strong>From Beginner to Athlete</strong><br/>Whether you’re stepping into a gym for the first time or preparing for a competition, personal coaching is the fastest and most effective way to reach your fitness potential.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Coaching",
-      "tags": [
-        "personal trainer",
-        "coaching",
-        "custom"
-      ],
-      "imageUrl": "/images/article9.jpg",
-      "comments": []
+      "tags": ["coaching", "personal trainer", "custom plan", "motivation", "progress"],
+      "imageUrl": "/images/article-coaching.jpg",
+      "comments": [
+        {
+          "author": "Isabel",
+          "date": "2024-06-17",
+          "content": "I finally feel like I know what I’m doing at the gym — thank you coach Paul!"
+        },
+        {
+          "author": "Alice",
+          "date": "2024-06-18",
+          "content": "The personalized plan helped me break through my plateau. Highly recommend!"
+        }
+      ]
     },
     {
       "slug": "family-fitness",
       "title": "Family Fitness: Work Out Together, Stay Healthy Together",
-      "description": "Build healthy habits and memories by working out as a family.",
-      "content": "Working out together boosts family health and connection. Benefits:\n<br/><br/>\n<ul>\n<li>\u2705 Builds Early Habits</li>\n<li>\u2705 Quality Time</li>\n<li>\u2705 Stress Relief</li>\n<li>\u2705 Teamwork & Confidence</li>\n</ul>\nFitness Park offers a kid\u2019s play area, flexible schedules, and inclusive classes.",
-      "author": "@FitnessPark",
+      "description": "Discover how exercising as a family creates stronger bonds and lifelong healthy habits.",
+      "content": "At Fitness Center, we know how important it is to maintain a healthy lifestyle — not just for individuals, but for entire families. That’s why we’ve created a family-friendly environment where parents and children alike can enjoy physical activity in a safe, welcoming space.</br></br><strong>Why Fitness as a Family Matters</strong><br/></br>✅ <strong>Healthy Habits Start Early:</strong> Children who see their parents exercise are more likely to adopt an active lifestyle.<br/></br>✅ <strong>Quality Time Together:</strong> Sharing workouts or gym visits becomes a fun and productive way to bond.<br/></br>✅ <strong>Stress Relief for Everyone:</strong> Fitness helps both adults and kids manage stress and improve mood.<br/></br>✅ <strong>Encourages Balance:</strong> It promotes teamwork, self-confidence, and better sleep — for all ages.</br></br><strong>Fitness Center for Families</strong><br/>We’ve designed our center to accommodate families with features like:<br/></br><strong>A Dedicated Kids’ Play Area:</strong> Let your children play safely while you train — no need to find a babysitter.<br/></br><strong>Mom-Focused Classes:</strong> Special sessions designed for postnatal fitness and active moms.<br/></br><strong>Flexible Hours & Online Booking:</strong> So families with tight schedules can still fit in a workout.<br/></br><strong>Inclusive Programs:</strong> Group classes and beginner-friendly activities that parents and teens can enjoy together.</br></br><strong>Lead by Example</strong><br/>Being active as a parent sends a powerful message to your children: that health and self-care matter. It also sets the stage for lasting habits that will benefit the whole family for years to come.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Family",
-      "tags": [
-        "family",
-        "children",
-        "healthy-lifestyle"
-      ],
-      "imageUrl": "/images/article10.jpg",
-      "comments": []
+      "tags": ["family", "children", "healthy habits", "stress relief", "active lifestyle"],
+      "imageUrl": "/images/article-family.jpg",
+      "comments": [
+        {
+          "author": "Thomas",
+          "date": "2024-06-17",
+          "content": "Love that I can train while my kids are safely having fun. Huge bonus!"
+        },
+        {
+          "author": "Emma",
+          "date": "2024-06-18",
+          "content": "Our Saturday workouts have become a family tradition. Thanks Fitness Center!"
+        }
+      ]
     },
     {
       "slug": "online-booking",
       "title": "Book Smarter: How Online Reservations Improve Your Fitness Routine",
-      "description": "Stay consistent by reserving your workouts in advance.",
-      "content": "Booking online helps you:\n<br/><br/>\n<ul>\n<li>\u2705 Plan Ahead</li>\n<li>\u2705 Save Time</li>\n<li>\u2705 Stay Organized</li>\n<li>\u2705 Boost Motivation</li>\n<li>\u2705 Access Anywhere</li>\n</ul>\nReserve classes and coaching via web or app in a few clicks.",
-      "author": "@FitnessPark",
+      "description": "Simplify your fitness journey with quick, flexible online booking for classes and coaching sessions.",
+      "content": "In a busy world, convenience is everything — especially when it comes to staying consistent with your workouts. That’s why Fitness Center offers a seamless online booking system that lets you schedule your group classes and personal training sessions in just a few clicks. It's quick, easy, and designed to fit your lifestyle.</br></br><strong>Benefits of Booking Online</strong><br/></br>✅ <strong>Plan Ahead:</strong> Reserve your spot in popular group classes or coaching sessions in advance — no surprises, no stress.<br/></br>✅ <strong>Save Time:</strong> Avoid waiting at the front desk. Book directly from your phone, tablet, or computer.<br/></br>✅ <strong>Stay Organized:</strong> Sync your sessions with your calendar and get reminders, so you never miss a workout.<br/></br>✅ <strong>Increased Motivation:</strong> Knowing you’ve booked a session helps commit to your routine — even on tough days.<br/></br>✅ <strong>Access from Anywhere:</strong> Whether you're at home, at work, or on vacation, you stay in control of your schedule.</br></br><strong>How It Works at Fitness Center</strong><br/></br><strong>Log In</strong> to Your Account via our website or mobile app<br/></br><strong>Browse Available Sessions</strong> (group classes, personal training, special events)<br/></br><strong>Select Your Time Slot</strong> and confirm your booking<br/></br><strong>Receive Instant Confirmation</strong> and optional reminders before your session<br/></br><strong>Manage or Cancel Bookings</strong> easily with no hassle</br></br><strong>Smart Fitness, Simplified</strong><br/>Our system is built to remove obstacles — so you can focus on what really matters: your health, your goals, and your well-being.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Digital",
-      "tags": [
-        "booking",
-        "online",
-        "schedule"
-      ],
-      "imageUrl": "/images/article11.jpg",
-      "comments": []
+      "tags": ["booking", "online", "schedule", "motivation", "convenience"],
+      "imageUrl": "/images/article-booking.jpg",
+      "comments": [
+        {
+          "author": "Jake",
+          "date": "2024-06-17",
+          "content": "I love how easy it is to manage my schedule. Super convenient!"
+        },
+        {
+          "author": "Grace",
+          "date": "2024-06-18",
+          "content": "The reminders help me stay on track. Great system!"
+        }
+      ]
     },
     {
       "slug": "discover-fitness-park",
-      "title": "Discover Fitness Park: More Than Just a Gym",
-      "description": "Explore everything Fitness Park offers beyond workout machines.",
-      "content": "Fitness Park features:\n<br/><br/>\n<ul>\n<li>\u2705 Spacious Workout Zones</li>\n<li>\u2705 Group Class Studios</li>\n<li>\u2705 Wellness & Relaxation Area</li>\n<li>\u2705 Smoothie & Health Bar</li>\n<li>\u2705 Kids\u2019 Area</li>\n<li>\u2705 Private Changing Rooms</li>\n</ul>\nMore than a gym \u2014 a complete wellness experience.",
-      "author": "@FitnessPark",
+      "title": "Discover Fitness Center: More Than Just a Gym",
+      "description": "Explore everything Fitness Center has to offer — from advanced workout zones to relaxation areas and family-friendly services.",
+      "content": "At Fitness Center, we believe that a gym should offer more than just equipment — it should provide an experience. From our cutting-edge workout spaces to our wellness-focused amenities, every detail has been carefully designed to help you feel comfortable, motivated, and empowered in your fitness journey.</br></br><strong>Step Inside: What You’ll Find at Fitness Center</strong><br/></br>✅ <strong>Spacious Training Zones:</strong> Enjoy an open, airy space with natural light and modern machines. Whether you're lifting weights, running on the treadmill, or following a HIIT routine, our layout offers both comfort and functionality.<br/></br>✅ <strong>Group Class Studios:</strong> Dedicated rooms for Zumba, Pilates, CrossFit, and more — with professional sound systems and energetic instructors to boost your motivation.<br/></br>✅ <strong>High-End Equipment:</strong> We provide premium machines and free weights, including cardio stations, functional training gear, and strength-building machines, suitable for all levels.<br/></br>✅ <strong>Wellness & Relaxation Area:</strong> After your workout, unwind in our sauna or schedule a massage to aid muscle recovery and stress relief.<br/></br>✅ <strong>Private Changing Rooms:</strong> Spacious, clean, and equipped with showers and lockers — so you can freshen up in peace before heading back to your day.<br/></br>✅ <strong>Smoothie & Health Bar:</strong> Refuel with protein shakes, healthy snacks, and fresh smoothies — designed to help you recover and nourish your body.<br/></br>✅ <strong>Kid-Friendly Facilities:</strong> A safe and engaging children’s play area allows parents to train while their kids have fun nearby.<br/></br>✅ <strong>Easy Access & Parking:</strong> Located on the outskirts of the city, our center offers ample parking and is easily reachable — making fitness convenient for everyone.",
+      "author": "@FitnessCenter",
       "date": "2024-06-16",
       "category": "Facilities",
-      "tags": [
-        "gym",
-        "wellness",
-        "experience"
-      ],
-      "imageUrl": "/images/article12.jpg",
-      "comments": []
+      "tags": ["gym", "wellness", "family", "equipment", "relaxation"],
+      "imageUrl": "/images/article-FitnessCenter.jpg",
+      "comments": [
+        {
+          "author": "David",
+          "date": "2024-06-17",
+          "content": "This gym really has it all — best decision I made this year!"
+        },
+        {
+          "author": "Claire",
+          "date": "2024-06-18",
+          "content": "Love the mix of performance and relaxation. The sauna is a gem!"
+        }
+      ]
     }
   ]
 }
