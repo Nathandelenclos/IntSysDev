@@ -10,7 +10,7 @@ interface CommentFormProps {
   onCancel: () => void;
 }
 
-export default function CommentForm({ articleSlug, onCommentAdded, onCancel }: CommentFormProps) {
+export default function CommentForm({ onCommentAdded, onCancel }: Omit<CommentFormProps, 'articleSlug'>) {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);

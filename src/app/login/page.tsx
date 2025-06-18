@@ -8,6 +8,8 @@ import {useAuth} from "@/contexts/AuthContext";
 import {useRouter} from "next/navigation";
 import {useState} from "react";
 import {useToast} from "@/contexts/ToastContext";
+import { AnimatedPage, AnimatedElement, AnimatedBackground } from "@/components/common/AnimatedPage";
+import { motion } from "framer-motion";
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -56,37 +58,57 @@ export default function Login() {
         <main className="min-h-screen">
             <Header />
 
-            <section className="h-[800px] bg-[url(/backgrounds/login.png)] bg-cover overflow-hidden">
-                <div className="flex flex-col flex-start gap-8 h-full justify-center m-12 max-w-[450px]">
-                    <H2>Login</H2>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-                        <div className="flex flex-col gap-4">
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                className="w-full p-3 border border-gray-300 bg-white"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                            <input
-                                type="password"
-                                placeholder="Password"
-                                className="w-full p-3 border border-gray-300 bg-white"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                            />
-                            {error && <p className="text-red-500 text-sm">{error}</p>}
-                            <button type="submit" className="bg-[#003A5E] text-white py-4 font-bold justify-center flex">
-                                Login
-                            </button>
-                        </div>
-                        <hr className="bg-gray-600"/>
-                        <Link href="/register" className="w-full text-center">Or register</Link>
-                    </form>
-                </div>
-            </section>
+            <AnimatedBackground 
+                className="h-[800px]"
+                backgroundImage="/backgrounds/login.png"
+                delay={0.2}
+            >
+                <AnimatedPage>
+                    <div className="flex flex-col flex-start gap-8 h-full justify-center m-12 max-w-[450px]">
+                        <AnimatedElement delay={0.1}>
+                            <H2>Login</H2>
+                        </AnimatedElement>
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+                            <AnimatedElement delay={0.2}>
+                                <div className="flex flex-col gap-4">
+                                    <input
+                                        type="email"
+                                        placeholder="Email"
+                                        className="w-full p-3 border border-gray-300 bg-white"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required
+                                    />
+                                    <input
+                                        type="password"
+                                        placeholder="Password"
+                                        className="w-full p-3 border border-gray-300 bg-white"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        required
+                                    />
+                                    {error && <p className="text-red-500 text-sm">{error}</p>}
+                                    <motion.button 
+                                        type="submit" 
+                                        className="bg-[#003A5E] text-white py-4 font-bold justify-center flex"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        Login
+                                    </motion.button>
+                                </div>
+                            </AnimatedElement>
+                            <AnimatedElement delay={0.3}>
+                                <hr className="bg-gray-600"/>
+                            </AnimatedElement>
+                            <AnimatedElement delay={0.4}>
+                                <Link href="/register" className="w-full text-center">Or register</Link>
+                            </AnimatedElement>
+                        </form>
+                    </div>
+                </AnimatedPage>
+            </AnimatedBackground>
             <Footer />
         </main>
     );
