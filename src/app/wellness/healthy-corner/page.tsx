@@ -1,6 +1,7 @@
 "use client";
 
 import {useState} from "react";
+import Image from "next/image";
 import {AnimatedButton, AnimatedElement, AnimatedPage} from "@/components/common/AnimatedPage";
 import {getCategories, getProductsByCategory} from "@/services/healthy-products";
 import {Product, ProductCategory} from "@/types/healthy-products";
@@ -57,10 +58,14 @@ export default function CoinHealthy() {
                                     className="bg-white rounded-lg p-6 cursor-pointer hover:bg-gray-50 transition-colors shadow-lg border border-gray-100"
                                     onClick={() => setSelectedProduct(product)}
                                 >
-                                    <div className="w-full h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-md mb-4 flex items-center justify-center">
-                                        <span className="text-gray-600 text-sm font-medium">
-                                            {product.name}
-                                        </span>
+                                    <div className="w-full h-48 rounded-md mb-4 overflow-hidden">
+                                        <Image
+                                            src={product.image}
+                                            alt={product.name}
+                                            width={400}
+                                            height={200}
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
                                     <p className="text-gray-600 text-sm mb-3">{product.description}</p>
@@ -89,10 +94,14 @@ export default function CoinHealthy() {
                                     </button>
                                 </div>
 
-                                <div className="w-full h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-md mb-4 flex items-center justify-center">
-                                    <span className="text-gray-600 text-sm font-medium">
-                                        {selectedProduct.name}
-                                    </span>
+                                <div className="w-full h-48 rounded-md mb-4 overflow-hidden">
+                                    <Image
+                                        src={selectedProduct.image}
+                                        alt={selectedProduct.name}
+                                        width={400}
+                                        height={200}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
 
                                 <p className="text-gray-600 mb-4">{selectedProduct.description}</p>

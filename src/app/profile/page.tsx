@@ -59,7 +59,7 @@ export default function Profile() {
                         <div className="relative h-[40vh] overflow-hidden">
                             <div className="absolute inset-0">
                                 <Image
-                                    src="/backgrounds/profile-hero.jpg"
+                                    src="/backgrounds/profile-hero.webp"
                                     alt="Profile Background"
                                     fill
                                     className="object-cover"
@@ -178,10 +178,6 @@ export default function Profile() {
                                                         <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-4 text-white">
                                                             <p className="text-2xl font-bold text-[#FFD600]">85%</p>
                                                             <p className="text-white text-sm">Attendance rate</p>
-                                                        </div>
-                                                        <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-4 text-white">
-                                                            <p className="text-2xl font-bold text-[#FFD600]">3</p>
-                                                            <p className="text-white text-sm">Favorite activities</p>
                                                         </div>
                                                     </div>
                                                 </div>
