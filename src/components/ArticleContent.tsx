@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Article } from '../types/article';
 
 interface ArticleContentProps {
@@ -19,11 +20,14 @@ const ArticleContent: React.FC<ArticleContentProps> = ({ article }) => {
         </span>
       </div>
       {article.imageUrl && (
-        <img 
-          src={article.imageUrl} 
-          alt={article.title}
-          className="w-full h-64 object-cover rounded-lg mb-6"
-        />
+        <div className="relative w-full h-64 mb-6">
+          <Image 
+            src={article.imageUrl} 
+            alt={article.title}
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
       )}
       <div 
         className="article-content"
