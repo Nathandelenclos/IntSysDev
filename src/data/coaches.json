@@ -32,7 +32,7 @@
             "id": "3",
             "name": "Emma Laurent",
             "role": "Pilates Instructor",
-            "imageUrl": "/coaches/emma.jpg",
+            "imageUrl": "/coaches/emma.webp",
             "bio": "Certified Pilates instructor with a passion for helping clients achieve better posture, core strength, and overall body awareness. Emma's gentle yet effective teaching style makes Pilates accessible to everyone.",
             "specialties": ["Mat Pilates", "Reformer Pilates", "Posture Correction"],
             "certifications": [
@@ -60,7 +60,7 @@
             "id": "5",
             "name": "Maria Rodriguez",
             "role": "Zumba Instructor",
-            "imageUrl": "/coaches/maria.jpg",
+            "imageUrl": "/coaches/emma.webp",
             "bio": "Born and raised in Colombia, Maria brings authentic Latin dance energy to every class. Her infectious enthusiasm and professional dance background make her classes both fun and effective.",
             "specialties": ["Latin Dance", "Cardio Fitness", "Group Exercise"],
             "certifications": [
@@ -88,7 +88,7 @@
             "id": "7",
             "name": "Sarah Dubois",
             "role": "Postnatal Fitness Specialist",
-            "imageUrl": "/coaches/sarah.jpg",
+            "imageUrl": "/coaches/emma.webp",
             "bio": "Specialized in postnatal fitness and recovery, Sarah helps new mothers regain strength and confidence through safe and effective exercise programs. Her approach combines fitness expertise with maternal support.",
             "specialties": ["Postnatal Recovery", "Core Rehabilitation", "Maternal Fitness"],
             "certifications": [
@@ -101,7 +101,7 @@
             "id": "8",
             "name": "Marie Laurent",
             "role": "Maternal Health Coach",
-            "imageUrl": "/coaches/marie.jpg",
+            "imageUrl": "/coaches/julie.jpg",
             "bio": "With a background in physiotherapy and maternal health, Marie specializes in creating safe and effective fitness programs for mothers at all stages of their journey.",
             "specialties": ["Maternal Health", "Gentle Exercise", "Wellness Coaching"],
             "certifications": [
@@ -116,7 +116,7 @@
             "id": "9",
             "name": "Sophie Martin",
             "role": "Wellness Specialist",
-            "imageUrl": "/coaches/sophie.jpg",
+            "imageUrl": "/coaches/julie.jpg",
             "bio": "Dedicated to promoting holistic wellness through traditional sauna practices. Sophie combines modern wellness techniques with time-honored sauna traditions for optimal health benefits.",
             "specialties": ["Sauna Therapy", "Wellness Coaching", "Stress Management"],
             "certifications": [
@@ -144,7 +144,7 @@
             "id": "11",
             "name": "Sophie Martin",
             "role": "Massage Therapist",
-            "imageUrl": "/coaches/sophie-m.jpg",
+            "imageUrl": "/coaches/julie.jpg",
             "bio": "Experienced massage therapist specializing in various techniques to promote relaxation, reduce stress, and improve overall well-being. Sophie's therapeutic approach addresses both physical and mental wellness.",
             "specialties": ["Deep Tissue", "Swedish Massage", "Stress Relief"],
             "certifications": [
@@ -157,7 +157,7 @@
             "id": "12",
             "name": "Lucas Dubois",
             "role": "Therapeutic Massage Specialist",
-            "imageUrl": "/coaches/lucas-m.jpg",
+            "imageUrl": "/coaches/lucas.jpg",
             "bio": "Specialized in therapeutic massage techniques, Lucas helps clients achieve optimal physical and mental wellness through personalized massage therapy sessions.",
             "specialties": ["Therapeutic Massage", "Sports Massage", "Wellness Therapy"],
             "certifications": [
@@ -172,7 +172,7 @@
             "id": "13",
             "name": "Emma Laurent",
             "role": "Relaxation Specialist",
-            "imageUrl": "/coaches/emma-r.jpg",
+            "imageUrl": "/coaches/emma.webp",
             "bio": "Dedicated to helping clients achieve deep relaxation and stress relief through guided sessions. Emma's calming presence and expertise create a perfect environment for relaxation and rejuvenation.",
             "specialties": ["Guided Relaxation", "Stress Management", "Mindfulness"],
             "certifications": [
@@ -185,7 +185,7 @@
             "id": "14",
             "name": "Thomas Moreau",
             "role": "Wellness & Relaxation Coach",
-            "imageUrl": "/coaches/thomas-r.jpg",
+            "imageUrl": "/coaches/thomas.jpg",
             "bio": "Expert in relaxation techniques and wellness practices, Thomas helps clients find balance and peace through personalized relaxation sessions and wellness guidance.",
             "specialties": ["Relaxation Techniques", "Wellness Coaching", "Stress Relief"],
             "certifications": [

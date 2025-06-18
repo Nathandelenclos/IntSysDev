@@ -2,9 +2,9 @@
 
 import {useState} from "react";
 import {H2} from "@/components/typo/H2";
-import {Coach} from "@/types/activity";
 import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/components/activities";
 import Image from "next/image";
+import coaches from "@/data/coaches.json";
 
 const saunaSchedule = {
     schedules: [
@@ -46,35 +46,6 @@ const saunaSchedule = {
         }
     ]
 };
-
-const coaches: Coach[] = [
-    {
-        id: "1",
-        name: "Sophie Dubois",
-        role: "Wellness Specialist",
-        imageUrl: "/coaches/sophie.jpg",
-        bio: "With a background in holistic wellness and spa therapy, Sophie brings a wealth of knowledge in relaxation techniques and wellness practices. She ensures a peaceful and rejuvenating experience for all our sauna guests.",
-        specialties: ["Sauna Therapy", "Wellness Coaching", "Stress Management"],
-        certifications: [
-            "Certified Spa Therapist",
-            "Wellness Coach Certification",
-            "Holistic Health Practitioner"
-        ]
-    },
-    {
-        id: "2",
-        name: "Marc Laurent",
-        role: "Wellness & Recovery Specialist",
-        imageUrl: "/coaches/marc.jpg",
-        bio: "Specializing in recovery and wellness practices, Marc helps clients optimize their recovery through sauna therapy and complementary wellness techniques. His expertise in sports recovery makes him particularly valuable for athletes.",
-        specialties: ["Recovery Techniques", "Sauna Therapy", "Wellness Planning"],
-        certifications: [
-            "Sports Recovery Specialist",
-            "Wellness Therapy Certification",
-            "Thermal Therapy Expert"
-        ]
-    }
-];
 
 const features = [
     {
@@ -191,7 +162,7 @@ export default function WellnessPage() {
                 <div className="mb-16">
                     <h3 className="text-3xl font-bold text-gray-800 mb-8">Our Wellness Specialists</h3>
                     <div className="max-w-3xl mx-auto">
-                        <CoachesSlider coaches={coaches} />
+                        <CoachesSlider coaches={coaches.sauna} />
                     </div>
                 </div>
 

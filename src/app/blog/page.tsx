@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {getAllArticles} from "@/utils/articles";
 import {AnimatedButton, AnimatedCard, AnimatedElement, AnimatedPage} from "@/components/common/AnimatedPage";
+import {useAuth} from "@/contexts/AuthContext";
 
 interface IPost {
     slug: string;
@@ -34,6 +35,7 @@ const Card = ({ post, index }: { post: IPost; index: number }) => {
 
 export default function Blog() {
     const articles = getAllArticles();
+    const {user} = useAuth();
     const posts: IPost[] = articles.map(article => ({
         slug: article.slug,
         title: article.title,
@@ -46,11 +48,13 @@ export default function Blog() {
             <AnimatedElement delay={0.1}>
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white">BLOG</h2>
-                    <AnimatedButton className="bg-[#FFD600] px-4 py-2 font-bold rounded-md text-sm sm:text-base">
-                        <Link href="/blog/create">
-                            Create a Post
-                        </Link>
-                    </AnimatedButton>
+                    { user && (
+                        <AnimatedButton className="bg-[#FFD600] px-4 py-2 font-bold rounded-md text-sm sm:text-base">
+                            <Link href="/blog/create">
+                                Create a Post
+                            </Link>
+                        </AnimatedButton>
+                    )}
                 </div>
             </AnimatedElement>
 

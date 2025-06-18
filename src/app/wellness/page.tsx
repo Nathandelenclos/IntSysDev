@@ -3,7 +3,8 @@
 import {H2} from "@/components/typo/H2";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatedPage, AnimatedElement, AnimatedCard } from "@/components/common/AnimatedPage";
+import {AnimatedCard, AnimatedElement, AnimatedPage} from "@/components/common/AnimatedPage";
+import {getFeaturedProducts} from "@/services/healthy-products";
 
 const wellnessServices = [
     {
@@ -30,6 +31,8 @@ const wellnessServices = [
 ];
 
 export default function WellnessPage() {
+    const featuredProducts = getFeaturedProducts(4);
+
     return (
         <AnimatedPage>
             <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -92,6 +95,53 @@ export default function WellnessPage() {
                                     </Link>
                                 </AnimatedCard>
                             ))}
+                        </div>
+                    </AnimatedElement>
+
+                    {/* Healthy Corner Section */}
+                    <AnimatedElement delay={0.3}>
+                        <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-16 shadow-lg border border-green-200">
+                            <div className="text-center mb-8">
+                                <h3 className="text-3xl font-bold mb-4 text-gray-800">Healthy Corner</h3>
+                                <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                                    Fuel your wellness journey with our nutritious and delicious healthy products. 
+                                    From energizing smoothies to protein-packed shakes and wholesome snacks.
+                                </p>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                                {featuredProducts.map((product, index) => (
+                                    <AnimatedCard key={product.id} delay={0.4 + index * 0.1}>
+                                        <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-green-100">
+                                            <div className="flex items-center justify-between mb-3">
+                                                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                                                    product.category === 'smoothie' ? 'bg-blue-100 text-blue-800' :
+                                                    product.category === 'shake' ? 'bg-purple-100 text-purple-800' :
+                                                    'bg-green-100 text-green-800'
+                                                }`}>
+                                                    {product.category}
+                                                </span>
+                                                <span className="text-sm text-gray-500">{product.calories} cal</span>
+                                            </div>
+                                            <h4 className="font-bold text-gray-800 mb-2">{product.name}</h4>
+                                            <p className="text-gray-600 text-sm mb-3">{product.description}</p>
+                                            <div className="flex justify-between items-center">
+                                                <span className="text-sm text-gray-600">Protein: {product.protein}g</span>
+                                                <span className="text-[#FFD600] font-bold">{product.price}</span>
+                                            </div>
+                                        </div>
+                                    </AnimatedCard>
+                                ))}
+                            </div>
+                            
+                            <div className="text-center">
+                                <Link 
+                                    href="/wellness/healthy-corner"
+                                    className="inline-block px-8 py-4 bg-[#FFD600] text-black rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                                >
+                                    Explore All Products
+                                </Link>
+                            </div>
                         </div>
                     </AnimatedElement>
 

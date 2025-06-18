@@ -2,9 +2,9 @@
 
 import {useState} from "react";
 import {H2} from "@/components/typo/H2";
-import {Coach} from "@/types/activity";
 import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/components/activities";
 import Image from "next/image";
+import coaches from "@/data/coaches.json";
 
 const relaxationSchedule = {
     schedules: [
@@ -46,35 +46,6 @@ const relaxationSchedule = {
         }
     ]
 };
-
-const coaches: Coach[] = [
-    {
-        id: "1",
-        name: "Emma Rousseau",
-        role: "Relaxation Specialist",
-        imageUrl: "/coaches/emma.jpg",
-        bio: "Emma specializes in guided relaxation and meditation techniques. With a background in mindfulness and stress management, she helps clients achieve deep relaxation and inner peace.",
-        specialties: ["Guided Meditation", "Breathing Techniques", "Stress Management"],
-        certifications: [
-            "Mindfulness Instructor",
-            "Stress Management Specialist",
-            "Meditation Teacher"
-        ]
-    },
-    {
-        id: "2",
-        name: "Thomas Moreau",
-        role: "Wellness Coach",
-        imageUrl: "/coaches/thomas.jpg",
-        bio: "Thomas combines traditional relaxation methods with modern wellness practices. His approach focuses on creating a holistic relaxation experience that addresses both mind and body.",
-        specialties: ["Holistic Relaxation", "Wellness Coaching", "Mind-Body Connection"],
-        certifications: [
-            "Wellness Coach Certification",
-            "Holistic Health Practitioner",
-            "Relaxation Therapy Expert"
-        ]
-    }
-];
 
 const features = [
     {
@@ -191,7 +162,7 @@ export default function RelaxationPage() {
                 <div className="mb-16">
                     <h3 className="text-3xl font-bold text-gray-800 mb-8">Our Relaxation Specialists</h3>
                     <div className="max-w-3xl mx-auto">
-                        <CoachesSlider coaches={coaches} />
+                        <CoachesSlider coaches={coaches.relaxation} />
                     </div>
                 </div>
 

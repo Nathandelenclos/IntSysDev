@@ -2,9 +2,9 @@
 
 import {useState} from "react";
 import {H2} from "@/components/typo/H2";
-import {Coach} from "@/types/activity";
 import {ActivitySchedule, BookingModal, CoachesSlider, WeeklySchedule} from "@/components/activities";
 import Image from "next/image";
+import coaches from "@/data/coaches.json";
 
 const massageSchedule = {
     schedules: [
@@ -46,35 +46,6 @@ const massageSchedule = {
         }
     ]
 };
-
-const coaches: Coach[] = [
-    {
-        id: "1",
-        name: "Marie Laurent",
-        role: "Senior Massage Therapist",
-        imageUrl: "/coaches/marie.jpg",
-        bio: "With over 15 years of experience in therapeutic massage, Marie specializes in deep tissue massage and sports recovery. Her expertise helps clients achieve optimal relaxation and pain relief.",
-        specialties: ["Deep Tissue Massage", "Sports Massage", "Therapeutic Massage"],
-        certifications: [
-            "Licensed Massage Therapist",
-            "Sports Massage Certification",
-            "Deep Tissue Specialist"
-        ]
-    },
-    {
-        id: "2",
-        name: "Pierre Dubois",
-        role: "Wellness Massage Specialist",
-        imageUrl: "/coaches/pierre.jpg",
-        bio: "Pierre focuses on relaxation and wellness massage techniques. His gentle approach and attention to detail create a truly rejuvenating experience for all clients.",
-        specialties: ["Relaxation Massage", "Swedish Massage", "Aromatherapy"],
-        certifications: [
-            "Wellness Massage Certification",
-            "Aromatherapy Specialist",
-            "Relaxation Therapy Expert"
-        ]
-    }
-];
 
 const features = [
     {
@@ -191,7 +162,7 @@ export default function MassagePage() {
                 <div className="mb-16">
                     <h3 className="text-3xl font-bold text-gray-800 mb-8">Our Massage Therapists</h3>
                     <div className="max-w-3xl mx-auto">
-                        <CoachesSlider coaches={coaches} />
+                        <CoachesSlider coaches={coaches.massage} />
                     </div>
                 </div>
 

@@ -1,0 +1,176 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Berry Blast Smoothie",
+      "description": "Mix of strawberries, blueberries and raspberries with Greek yogurt",
+      "price": "€6.50",
+      "category": "smoothie",
+      "image": "/images/smoothie-berry.jpg",
+      "calories": 180,
+      "protein": 12,
+      "carbs": 25,
+      "fat": 2,
+      "fiber": 4,
+      "ingredients": ["Strawberries", "Blueberries", "Raspberries", "Greek yogurt", "Honey"],
+      "benefits": ["Rich in antioxidants", "High in protein", "Natural sweetness"]
+    },
+    {
+      "id": 2,
+      "name": "Green Energy Smoothie",
+      "description": "Spinach, banana, apple and ginger for an energy boost",
+      "price": "€7.00",
+      "category": "smoothie",
+      "image": "/images/smoothie-green.jpg",
+      "calories": 150,
+      "protein": 8,
+      "carbs": 30,
+      "fat": 1,
+      "fiber": 6,
+      "ingredients": ["Spinach", "Banana", "Apple", "Ginger", "Almond milk"],
+      "benefits": ["Natural energy boost", "High in fiber", "Anti-inflammatory"]
+    },
+    {
+      "id": 3,
+      "name": "Protein Plus Shake",
+      "description": "Whey protein, banana and almonds for recovery",
+      "price": "€8.50",
+      "category": "shake",
+      "image": "/images/shake-protein.jpg",
+      "calories": 320,
+      "protein": 25,
+      "carbs": 35,
+      "fat": 8,
+      "fiber": 3,
+      "ingredients": ["Whey protein", "Banana", "Almonds", "Milk", "Vanilla"],
+      "benefits": ["Muscle recovery", "High protein content", "Post-workout fuel"]
+    },
+    {
+      "id": 4,
+      "name": "Healthy Chocolate Shake",
+      "description": "Raw cocoa, avocado and maple syrup for a gourmet taste",
+      "price": "€7.50",
+      "category": "shake",
+      "image": "/images/shake-chocolate.jpg",
+      "calories": 280,
+      "protein": 15,
+      "carbs": 40,
+      "fat": 12,
+      "fiber": 5,
+      "ingredients": ["Raw cocoa", "Avocado", "Maple syrup", "Almond milk", "Cinnamon"],
+      "benefits": ["Rich in healthy fats", "Antioxidant-rich", "Satisfying treat"]
+    },
+    {
+      "id": 5,
+      "name": "Homemade Granola",
+      "description": "Oat flakes, nuts and dried fruits with no added sugar",
+      "price": "€4.50",
+      "category": "snack",
+      "image": "/images/granola.jpg",
+      "calories": 220,
+      "protein": 6,
+      "carbs": 35,
+      "fat": 8,
+      "fiber": 4,
+      "ingredients": ["Oat flakes", "Mixed nuts", "Dried fruits", "Coconut", "Honey"],
+      "benefits": ["No added sugar", "High in fiber", "Sustained energy"]
+    },
+    {
+      "id": 6,
+      "name": "Energy Balls",
+      "description": "Dates, nuts and seeds for an energizing snack",
+      "price": "€3.50",
+      "category": "snack",
+      "image": "/images/energy-balls.jpg",
+      "calories": 160,
+      "protein": 4,
+      "carbs": 25,
+      "fat": 6,
+      "fiber": 3,
+      "ingredients": ["Dates", "Mixed nuts", "Chia seeds", "Coconut", "Cacao nibs"],
+      "benefits": ["Natural energy", "Portable snack", "Nutrient-dense"]
+    },
+    {
+      "id": 7,
+      "name": "Tropical Paradise Smoothie",
+      "description": "Mango, pineapple and coconut water for a tropical escape",
+      "price": "€6.80",
+      "category": "smoothie",
+      "image": "/images/smoothie-tropical.jpg",
+      "calories": 165,
+      "protein": 3,
+      "carbs": 38,
+      "fat": 1,
+      "fiber": 3,
+      "ingredients": ["Mango", "Pineapple", "Coconut water", "Lime", "Mint"],
+      "benefits": ["Hydrating", "Vitamin C rich", "Refreshing"]
+    },
+    {
+      "id": 8,
+      "name": "Vanilla Almond Shake",
+      "description": "Vanilla protein with almond butter for a creamy delight",
+      "price": "€8.00",
+      "category": "shake",
+      "image": "/images/shake-vanilla.jpg",
+      "calories": 290,
+      "protein": 22,
+      "carbs": 28,
+      "fat": 10,
+      "fiber": 4,
+      "ingredients": ["Vanilla protein", "Almond butter", "Banana", "Milk", "Cinnamon"],
+      "benefits": ["Creamy texture", "High protein", "Satisfying"]
+    },
+    {
+      "id": 9,
+      "name": "Trail Mix",
+      "description": "Premium nuts, seeds and dried fruits for the perfect snack",
+      "price": "€5.00",
+      "category": "snack",
+      "image": "/images/trail-mix.jpg",
+      "calories": 180,
+      "protein": 5,
+      "carbs": 20,
+      "fat": 10,
+      "fiber": 3,
+      "ingredients": ["Almonds", "Cashews", "Pumpkin seeds", "Raisins", "Dark chocolate"],
+      "benefits": ["Perfect portion", "Nutrient-rich", "On-the-go snack"]
+    },
+    {
+      "id": 10,
+      "name": "Acai Bowl",
+      "description": "Acai berries with granola and fresh fruits",
+      "price": "€9.50",
+      "category": "smoothie",
+      "image": "/images/acai-bowl.jpg",
+      "calories": 240,
+      "protein": 8,
+      "carbs": 42,
+      "fat": 6,
+      "fiber": 7,
+      "ingredients": ["Acai berries", "Granola", "Banana", "Strawberries", "Coconut"],
+      "benefits": ["Superfood rich", "High in antioxidants", "Instagram-worthy"]
+    }
+  ],
+  "categories": [
+    {
+      "key": "all",
+      "label": "All",
+      "description": "All healthy products"
+    },
+    {
+      "key": "smoothie",
+      "label": "Smoothies",
+      "description": "Fresh and nutritious smoothies"
+    },
+    {
+      "key": "shake",
+      "label": "Shakes",
+      "description": "Protein-packed shakes"
+    },
+    {
+      "key": "snack",
+      "label": "Snacks",
+      "description": "Healthy snacks and treats"
+    }
+  ]
+} 

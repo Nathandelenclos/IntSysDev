@@ -33,6 +33,7 @@ export const Header = () => {
             label: "WELLNESS",
             href: "/wellness",
             items: [
+                { label: "Healthy Corner", href: "/wellness/healthy-corner" },
                 { label: "Sauna", href: "/wellness/sauna" },
                 { label: "Massage", href: "/wellness/massage" },
                 { label: "Relaxation", href: "/wellness/relaxation" }
@@ -44,6 +45,7 @@ export const Header = () => {
                 { label: "Contact", href: "/contact" },
                 { label: "About us", href: "/about-us" },
                 { label: "Kids' area", href: "/kids-area" },
+                { label: "FAQ", href: "/faq" },
             ]
         },
     ];
@@ -95,6 +97,12 @@ export const Header = () => {
                             </button>
                             {isProfileOpen && (
                                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                                    <Link
+                                        href="/profile"
+                                        className="w-full text-left px-4 py-2 text-gray-800 hover:bg-[#ffd600] hover:text-black block"
+                                    >
+                                        Profile
+                                    </Link>
                                     <button
                                         onClick={logout}
                                         className="w-full text-left px-4 py-2 text-gray-800 hover:bg-[#ffd600] hover:text-black"
@@ -141,6 +149,12 @@ export const Header = () => {
                     <hr className="border-gray-600" />
                     {user ? (
                         <div className="flex flex-col gap-4">
+                            <Link
+                                href="/profile"
+                                className="text-white hover:text-[#ffd600] flex items-center gap-2"
+                            >
+                                Profile
+                            </Link>
                             <button
                                 onClick={logout}
                                 className="text-white hover:text-[#ffd600] flex items-center gap-2"
