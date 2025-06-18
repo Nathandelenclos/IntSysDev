@@ -10,7 +10,6 @@ import {useAuth} from "@/contexts/AuthContext";
 import {useRouter} from "next/navigation";
 import {useEffect} from "react";
 import {H1} from "@/components/typo/H1";
-import {H2} from "@/components/typo/H2";
 import Image from "next/image";
 import {Breadcrumb} from "@/components/layouts/Breadcrumb";
 

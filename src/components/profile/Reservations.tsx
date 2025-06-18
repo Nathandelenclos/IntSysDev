@@ -66,7 +66,8 @@ export function Reservations() {
         }
     };
 
-    const handleReschedule = (reservation: Reservation) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const handleReschedule = (_: Reservation) => {
         showToast({
             type: "info",
             title: "Reschedule Feature",

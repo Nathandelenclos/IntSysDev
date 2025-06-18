@@ -40,7 +40,8 @@ export default function Login() {
                     duration: 5000
                 });
             }
-        } catch (err) {
+        } catch (e) {
+            console.error(e)
             setError("An error occurred. Please try again.");
             showToast({
                 type: "error",
